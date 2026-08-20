@@ -4,9 +4,9 @@ A fast, responsive static website built with plain HTML, CSS and JavaScript.
 
 ## Files
 - `index.html` — full website
-- `assets/styles.css` — design system and responsive layout
-- `assets/main.js` — navigation + reveal animations
-- `assets/favicon.svg` — site icon
+- `styles.css` — design system and responsive layout
+- `main.js` — navigation + reveal animations
+- `favicon.svg` — site icon
 
 ## Preview locally
 Double-click `index.html`, or run a tiny local server:
