@@ -1696,3 +1696,167 @@ footer{
     grid-template-columns:repeat(2,minmax(0,1fr)) !important;
   }
 }
+
+
+/* =========================================================
+   MR.WHEELS — FINAL V2.1
+   Transparent logo + supplier network + video correction
+   ========================================================= */
+
+/* True transparent logo — no visible black rectangle */
+.site-header{
+  background:#06080a !important;
+}
+.brand-logo{
+  width:255px !important;
+  height:92px !important;
+}
+.brand-logo img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  background:transparent !important;
+  mix-blend-mode:normal !important;
+}
+
+/* Footer uses the same transparent asset */
+.footer-logo img{
+  background:transparent !important;
+}
+
+/* Supplier section brought into the same visual scale as the rest of the site */
+.supplier-layout-final{
+  grid-template-columns:minmax(0,.92fr) minmax(520px,1.08fr) !important;
+  gap:7vw !important;
+  align-items:start !important;
+}
+.supplier-layout-final .eyebrow{
+  color:#616b75 !important;
+  font:850 11px/1 Arial,Helvetica,sans-serif !important;
+  letter-spacing:.18em !important;
+}
+.supplier-layout-final h2{
+  max-width:760px;
+  margin:0 0 34px !important;
+  color:#0a0e13 !important;
+  font:850 clamp(45px,4.55vw,72px)/.98 Arial,Helvetica,sans-serif !important;
+  letter-spacing:-.04em !important;
+}
+.supplier-layout-final .lead{
+  max-width:790px;
+  color:#10151a !important;
+  font:500 clamp(19px,1.55vw,24px)/1.55 Arial,Helvetica,sans-serif !important;
+  margin-bottom:22px !important;
+}
+.supplier-secondary{
+  max-width:790px;
+  color:#59636d !important;
+  font:500 15px/1.72 Arial,Helvetica,sans-serif !important;
+}
+.supplier-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  margin-top:22px;
+  min-height:48px;
+  padding:0 18px;
+  color:#11161b;
+  border:1px solid rgba(17,22,27,.28);
+  border-radius:5px;
+  font:850 12px/1 Arial,Helvetica,sans-serif;
+  letter-spacing:.065em;
+  transition:.22s ease;
+}
+.supplier-cta:hover{
+  color:#fff;
+  border-color:#f36a00;
+  background:#f36a00;
+}
+
+.supplier-card-final{
+  padding:31px 32px 28px !important;
+  border-radius:8px !important;
+  background:#0b0f13 !important;
+  border:1px solid rgba(255,255,255,.13);
+  border-top:2px solid #f36a00 !important;
+  box-shadow:0 28px 70px rgba(7,10,13,.18);
+}
+.supplier-card-final .supplier-card-top{
+  padding-bottom:20px !important;
+  color:#85919d !important;
+  font:850 9px/1 Arial,Helvetica,sans-serif !important;
+  letter-spacing:.18em !important;
+}
+.supplier-priority-grid{
+  display:grid;
+  grid-template-columns:1fr;
+}
+.supplier-priority{
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:15px;
+  padding:19px 0;
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+.supplier-priority b{
+  color:#ff7a18;
+  font:850 10px/1 Arial,Helvetica,sans-serif;
+  padding-top:3px;
+}
+.supplier-priority strong{
+  display:block;
+  margin-bottom:6px;
+  color:#fff;
+  font:850 14px/1.25 Arial,Helvetica,sans-serif;
+  letter-spacing:.035em;
+}
+.supplier-priority span{
+  display:block;
+  max-width:620px;
+  color:rgba(255,255,255,.58);
+  font:500 12.5px/1.55 Arial,Helvetica,sans-serif;
+}
+.supplier-note-final{
+  margin-top:25px !important;
+  padding:20px 21px !important;
+  border-radius:6px !important;
+  background:rgba(243,106,0,.07) !important;
+  border:1px solid rgba(243,106,0,.16);
+}
+.supplier-note-final strong{
+  color:#fff !important;
+  font:850 14px/1.2 Arial,Helvetica,sans-serif !important;
+}
+.supplier-note-final span{
+  margin-top:6px;
+  color:rgba(255,255,255,.61) !important;
+  font:500 12.5px/1.55 Arial,Helvetica,sans-serif !important;
+}
+
+/* Consistent video ratio */
+.motion-media{
+  aspect-ratio:16/9 !important;
+  background:#000 !important;
+}
+.motion-media iframe{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  border:0 !important;
+}
+
+@media(max-width:980px){
+  .supplier-layout-final{
+    grid-template-columns:1fr !important;
+    gap:46px !important;
+  }
+}
+@media(max-width:760px){
+  .brand-logo{
+    width:190px !important;
+    height:70px !important;
+  }
+  .supplier-layout-final h2{
+    font-size:42px !important;
+  }
+}

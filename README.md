@@ -1,18 +1,13 @@
-# MR.WHEELS — Production Final
+# MR.WHEELS — Production Final V2.1
 
-This build consolidates the approved visual direction and requested final refinements.
+This revision includes:
+- Correctly cropped RGBA transparent logo (no black rectangular logo background)
+- Header background aligned to the site's graphite/black palette
+- Replaced the disliked vertical production video with DVIDS electrochemical machining footage
+- Redesigned Supplier Partnerships section to match the scale and corporate tone of the rest of the site
+- Larger, uppercase supplier-network headline
+- More professional supplier qualification priorities with supporting descriptions
+- Responsive supplier layout and video treatment
 
-Included:
-- Cropped official MR.WHEELS logo so the header logo is genuinely larger and readable
-- Stronger, more readable navigation
-- Approved military-logistics hero with “ENGINEERED PARTS. MISSION READY. DELIVERED.”
-- Government Supply Solutions cards preserved
-- Automotive section upgraded to more corporate wording
-- All four automotive card headings standardized in uppercase, same size/weight
-- 24 high-value supply categories in a balanced 3x8 desktop grid
-- Improved five-step sourcing / validation / execution workflow
-- Replaced the disliked vertical CNC video with a landscape machining video
-- Responsive desktop and mobile treatment
-
-Upload every extracted file to the root of the existing GitHub repository.
+Upload all extracted files to the root of your existing GitHub repository.
 Vercel will redeploy automatically after commit.
