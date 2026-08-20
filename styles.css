@@ -925,3 +925,396 @@ footer p:last-child { text-align:right; }
   .motion-heading{grid-template-columns:1fr;gap:18px}
   .motion-grid{grid-template-columns:1fr}
 }
+
+
+/* =========================================================
+   MR.WHEELS FINAL — corporate polish
+   ========================================================= */
+
+/* Automotive cards */
+.service-card h3{
+  font-size:17px !important;
+  line-height:1.2;
+  letter-spacing:.035em;
+  font-weight:800;
+}
+.split-intro .eyebrow{
+  font-size:11px;
+  letter-spacing:.18em;
+  font-weight:800;
+}
+.split-intro h2{
+  max-width:760px;
+  font-size:clamp(42px,5vw,74px);
+  line-height:.98;
+}
+.service-card p{
+  font-size:13.5px;
+  line-height:1.6;
+}
+
+/* Image-based Government capability cards */
+.capability-grid-visual{
+  align-items:stretch;
+}
+.capability-visual{
+  padding:0 !important;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  min-height:390px;
+  background:#0c1014 !important;
+}
+.capability-image{
+  height:190px;
+  overflow:hidden;
+  background:#07090b;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.capability-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  filter:saturate(.86) contrast(1.02);
+  transition:transform .45s ease, filter .45s ease;
+}
+.capability-visual:hover .capability-image img{
+  transform:scale(1.035);
+  filter:saturate(.96) contrast(1.04);
+}
+.capability-body{
+  position:relative;
+  padding:24px 25px 28px;
+  flex:1;
+}
+.capability-body .capability-icon{
+  width:42px;
+  height:42px;
+  margin:0 0 24px;
+  border-radius:10px;
+}
+.capability-body h3{
+  margin:0 0 11px;
+  color:#fff;
+  font:800 16px/1.25 Arial,Helvetica,sans-serif;
+  letter-spacing:.035em;
+}
+.capability-body p{
+  margin:0;
+  color:rgba(255,255,255,.60);
+  font:400 13.5px/1.62 Arial,Helvetica,sans-serif;
+}
+.capability-visual{
+  transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease;
+}
+.capability-visual:hover{
+  transform:translateY(-4px);
+  border-color:rgba(232,117,43,.36);
+  box-shadow:0 22px 60px rgba(0,0,0,.22);
+}
+
+/* Slightly more premium category typography */
+.category-tags span,
+.category-pills span{
+  font-size:13px !important;
+  font-weight:650 !important;
+  letter-spacing:.01em !important;
+}
+
+/* Footer & contact wording */
+footer p{
+  letter-spacing:.03em;
+}
+
+/* Better mobile rhythm */
+@media(max-width:640px){
+  .split-intro h2{font-size:40px}
+  .capability-image{height:210px}
+  .service-card h3{font-size:16px !important}
+}
+
+
+/* =========================================================
+   MR.WHEELS — MOCKUP-ALIGNED FINAL THEME
+   ========================================================= */
+
+:root{
+  --mw-orange:#f06a00;
+  --mw-orange-2:#ff7a18;
+  --mw-black:#050608;
+  --mw-panel:#0b0f12;
+  --mw-panel-2:#101418;
+  --mw-border:rgba(255,255,255,.16);
+  --mw-text:#f7f7f7;
+  --mw-muted:rgba(255,255,255,.72);
+}
+
+/* HEADER */
+.site-header{
+  height:118px !important;
+  padding:0 clamp(36px,5vw,78px) !important;
+  background:#050608 !important;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:none !important;
+}
+.site-header.scrolled{
+  background:#050608 !important;
+}
+.brand-logo{
+  width:300px !important;
+  height:108px !important;
+  overflow:visible !important;
+}
+.brand-logo img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  transform:none !important;
+}
+.main-nav{
+  gap:38px !important;
+  font-family:Arial,Helvetica,sans-serif !important;
+}
+.main-nav a{
+  color:#f7f7f7 !important;
+  opacity:1 !important;
+  font-size:15px !important;
+  font-weight:750 !important;
+  letter-spacing:.01em !important;
+}
+.main-nav .nav-cta{
+  padding:14px 24px !important;
+  border:1px solid var(--mw-orange) !important;
+  border-radius:999px !important;
+}
+
+/* HERO */
+.hero{
+  min-height:720px !important;
+  padding:165px clamp(40px,6vw,92px) 90px !important;
+  background:
+    linear-gradient(90deg,rgba(3,4,5,.96) 0%,rgba(3,4,5,.78) 33%,rgba(3,4,5,.24) 68%,rgba(3,4,5,.35) 100%),
+    url("government-contract-fulfillment.png") center 48% / cover no-repeat !important;
+}
+.hero-grid,.hero-glow,.hero:after{display:none !important}
+.hero-content{
+  max-width:610px !important;
+}
+.hero h1{
+  color:#fff !important;
+  font:850 clamp(50px,5.2vw,82px)/.98 Arial,Helvetica,sans-serif !important;
+  letter-spacing:-.035em !important;
+  text-transform:uppercase;
+  text-shadow:0 2px 18px rgba(0,0,0,.34);
+}
+.hero h1 span{
+  color:#fff !important;
+  -webkit-text-stroke:0 !important;
+}
+.hero-copy{
+  color:rgba(255,255,255,.82) !important;
+  font:500 clamp(18px,1.45vw,23px)/1.5 Arial,Helvetica,sans-serif !important;
+  max-width:560px !important;
+}
+.hero-actions .button-primary{
+  min-height:54px !important;
+  padding:0 26px !important;
+  border-radius:6px !important;
+  background:linear-gradient(180deg,var(--mw-orange-2),var(--mw-orange)) !important;
+  color:#fff !important;
+  font-size:14px !important;
+  letter-spacing:.04em !important;
+  box-shadow:none !important;
+}
+.hero-actions .button-ghost{
+  display:none !important;
+}
+.hero-panel,.scroll-cue,.credential-strip,.brand-statement{
+  display:none !important;
+}
+
+/* GLOBAL DARK CORPORATE FLOW */
+body{background:#07090b !important}
+.split-intro{background:#f3f4f5 !important}
+.section-label{
+  font-size:10px !important;
+  font-weight:850 !important;
+  letter-spacing:.18em !important;
+}
+
+/* AUTOMOTIVE */
+.split-intro .eyebrow{
+  color:#585f66 !important;
+  font-size:11px !important;
+  letter-spacing:.18em !important;
+}
+.split-intro h2{
+  text-transform:uppercase;
+  font-family:Arial,Helvetica,sans-serif !important;
+  font-weight:850 !important;
+  letter-spacing:-.035em !important;
+}
+.service-card{
+  border-radius:8px !important;
+  border:1px solid rgba(20,25,30,.14) !important;
+}
+.service-card h3{
+  font-family:Arial,Helvetica,sans-serif !important;
+  font-weight:850 !important;
+}
+
+/* GOVERNMENT */
+.government{
+  background:
+    radial-gradient(circle at 88% 10%,rgba(240,106,0,.08),transparent 27%),
+    #080b0e !important;
+}
+.government .section-label{
+  text-align:center;
+  border-bottom:0 !important;
+  margin-bottom:28px !important;
+  color:#fff !important;
+  font:850 clamp(26px,2.8vw,42px)/1 Arial,Helvetica,sans-serif !important;
+  letter-spacing:.03em !important;
+}
+.government-head{
+  display:none !important;
+}
+.capability-grid-visual{
+  gap:12px !important;
+  margin-top:12px !important;
+}
+.capability-visual{
+  min-height:430px !important;
+  border-radius:6px !important;
+  border:1px solid rgba(255,255,255,.20) !important;
+  background:#0a0d10 !important;
+}
+.capability-image{
+  height:215px !important;
+}
+.capability-body{
+  padding:20px 20px 24px !important;
+}
+.capability-body .capability-icon{
+  float:left;
+  margin:0 14px 8px 0 !important;
+  border-color:rgba(240,106,0,.55) !important;
+  color:var(--mw-orange-2) !important;
+}
+.capability-body h3{
+  color:#fff !important;
+  font-size:17px !important;
+  font-weight:850 !important;
+  letter-spacing:.025em !important;
+}
+.capability-body p{
+  color:rgba(255,255,255,.72) !important;
+  font-size:13.5px !important;
+  line-height:1.55 !important;
+}
+.capability-visual:hover{
+  border-color:rgba(240,106,0,.7) !important;
+}
+
+/* Hide the older large visual banner to keep the mockup composition tight */
+.government-visual{display:none !important}
+
+/* SUPPLY CATEGORIES */
+.category-band{
+  display:block !important;
+  margin-top:34px !important;
+  padding:26px 10px 4px !important;
+  border:0 !important;
+  background:transparent !important;
+}
+.category-band > div:first-child{
+  margin-bottom:18px !important;
+}
+.micro-label{
+  color:var(--mw-orange-2) !important;
+  font:850 11px/1 Arial,Helvetica,sans-serif !important;
+  letter-spacing:.15em !important;
+}
+.category-band h3{
+  margin-top:10px !important;
+  color:#fff !important;
+  font:850 clamp(28px,2.5vw,38px)/1.05 Arial,Helvetica,sans-serif !important;
+  letter-spacing:-.02em !important;
+}
+.category-band h3 b{
+  color:var(--mw-orange) !important;
+  font-weight:900;
+}
+.category-tags,.category-pills{
+  display:grid !important;
+  grid-template-columns:repeat(8,minmax(0,1fr)) !important;
+  gap:10px !important;
+}
+.category-tags span,.category-pills span{
+  min-height:48px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:8px 10px !important;
+  border:1px solid rgba(255,255,255,.22) !important;
+  border-radius:7px !important;
+  color:#fff !important;
+  background:#0b0e11 !important;
+  font:700 12px/1.2 Arial,Helvetica,sans-serif !important;
+  text-align:center !important;
+}
+.category-tags span:hover,.category-pills span:hover{
+  border-color:var(--mw-orange) !important;
+  background:rgba(240,106,0,.07) !important;
+}
+
+/* VIDEOS */
+.motion-section{
+  margin-top:64px !important;
+}
+.motion-heading h3{
+  color:#fff !important;
+  font-family:Arial,Helvetica,sans-serif !important;
+}
+.motion-card{
+  border-radius:8px !important;
+}
+
+/* ABOUT / SUPPLIER / CONTACT */
+.suppliers,.about{
+  background:#f3f4f5 !important;
+}
+.contact{
+  background:#080b0e !important;
+}
+.contact .button-primary{
+  background:var(--mw-orange) !important;
+  border-radius:6px !important;
+}
+
+/* FOOTER */
+footer{
+  background:#040506 !important;
+  border-top:1px solid rgba(255,255,255,.08) !important;
+}
+.footer-logo{
+  width:250px !important;
+}
+
+/* RESPONSIVE */
+@media(max-width:1180px){
+  .main-nav{gap:22px !important}
+  .main-nav a{font-size:13px !important}
+  .brand-logo{width:245px !important}
+  .category-tags,.category-pills{grid-template-columns:repeat(4,minmax(0,1fr)) !important}
+}
+@media(max-width:760px){
+  .site-header{height:86px !important;padding:0 18px !important}
+  .brand-logo{width:190px !important;height:76px !important}
+  .hero{min-height:640px !important;padding:130px 22px 72px !important}
+  .hero h1{font-size:48px !important}
+  .hero-copy{font-size:17px !important}
+  .category-tags,.category-pills{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+}

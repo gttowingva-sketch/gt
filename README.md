@@ -1,11 +1,16 @@
-# MR.WHEELS Website V3.3
+# MR.WHEELS — Mockup-Aligned Final Build
 
-New in V3.3:
-- Added "Capabilities in Motion" video section inspired by premium aerospace/defense corporate storytelling
-- Four operational video cards: armored vehicles, precision manufacturing, quality inspection, and logistics
-- Uses U.S. DoD/DVIDS public-domain footage with a clear non-endorsement note
-- Responsive 2-column desktop / 1-column mobile layout
-- Retains all V3.2 Automotive imagery and V3.1 brand refinements
+This version aligns the live site more closely with the approved visual direction:
+- Larger official MR.WHEELS logo
+- Larger, more readable navigation
+- Hero image with military logistics visual
+- Bold uppercase hero messaging
+- Government Supply Solutions as the central visual section
+- Image-based capability cards
+- SUPPLY CATEGORIES uses uppercase VEHICLE • AEROSPACE • MECHANICAL • INDUSTRIAL
+- Expanded high-value component category grid
+- Black / graphite / orange corporate visual system
+- Responsive desktop/mobile treatment
 
-Upload the extracted files to the root of the existing GitHub repository.
+Upload all extracted files to the root of the existing GitHub repository.
 Vercel will redeploy automatically after commit.
