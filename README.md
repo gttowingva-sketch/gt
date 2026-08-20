@@ -1,24 +1,12 @@
-# MR.WHEELS Corporate Website V2
+# MR.WHEELS Website V3
 
-A fast, responsive static website built with plain HTML, CSS and JavaScript.
+Corporate brand revision using the official MR.WHEELS logo and a restrained copper/orange accent system.
 
-## Files
-- `index.html` — full website
-- `styles.css` — design system and responsive layout
-- `main.js` — navigation + reveal animations
-- `favicon.svg` — site icon
+Upload all files in this folder directly to the root of the existing GitHub repository:
+- index.html
+- styles.css
+- main.js
+- favicon.svg
+- mr-wheels-logo.png
 
-## Preview locally
-Double-click `index.html`, or run a tiny local server:
-`python -m http.server 8000`
-
-Then open `http://localhost:8000`.
-
-## Deploy
-This site can be deployed to Cloudflare Pages, Netlify, GitHub Pages, or any standard web host.
-Point `mr-wheels.com` DNS to the selected host after deployment.
-
-## Before publishing
-- Add the preferred business phone number if desired.
-- Add official UEI/CAGE/NAICS only after you want those identifiers public and have verified them.
-- Add real automotive work photos later for additional credibility.
+Vercel will redeploy automatically after the GitHub commit.

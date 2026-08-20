@@ -443,3 +443,196 @@ footer p:last-child { text-align:right; }
  .credential-strip{grid-template-columns:1fr}
  .credential-strip div,.credential-strip div:not(:first-child){padding:22px 0;border-right:0;border-bottom:1px solid rgba(13,18,24,.09)}
 }
+
+
+/* =========================================================
+   MR.WHEELS V3 — Corporate brand system
+   ========================================================= */
+:root{
+  --mw-orange:#e8752b;
+  --mw-copper:#c9632b;
+  --mw-orange-soft:#f2a25f;
+  --mw-charcoal:#080a0d;
+  --mw-graphite:#11161c;
+  --mw-silver:#d8dde1;
+  --accent:var(--mw-orange);
+  --accent-2:var(--mw-copper);
+}
+
+.site-header{
+  height:86px;
+  background:linear-gradient(to bottom,rgba(5,7,9,.94),rgba(5,7,9,.46),transparent);
+}
+.site-header.scrolled{
+  background:rgba(7,9,12,.96);
+  border-bottom:1px solid rgba(232,117,43,.14);
+}
+.brand-logo{
+  width:205px;
+  height:68px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+}
+.brand-logo img{
+  width:205px;
+  height:auto;
+  display:block;
+  transform:scale(1.38);
+  transform-origin:center;
+}
+
+.hero{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 78% 50%,rgba(232,117,43,.13),transparent 28%),
+    radial-gradient(circle at 12% 24%,rgba(151,163,174,.07),transparent 26%),
+    linear-gradient(125deg,#050608 0%,#0b0e12 54%,#14191f 100%);
+}
+.hero-grid{
+  opacity:.7;
+  background-size:64px 64px;
+}
+.hero:after{
+  border-color:rgba(232,117,43,.075);
+  box-shadow:inset 0 0 0 90px rgba(232,117,43,.008),
+             inset 0 0 0 180px rgba(255,255,255,.005);
+}
+.hero-glow-a{background:#9e4b1f;opacity:.16}
+.hero-glow-b{background:#e8752b;opacity:.13}
+.hero h1{
+  max-width:1080px;
+  font-weight:690;
+}
+.hero h1 span{
+  -webkit-text-stroke:1px rgba(239,146,84,.72);
+}
+.hero .eyebrow,.eyebrow.accent,.micro-label,.focus-number,
+.capability-icon,.process-step b,.supplier-card li span{
+  color:var(--mw-orange-soft);
+}
+.button-primary{
+  background:var(--mw-orange);
+  color:#fff;
+  box-shadow:0 14px 40px rgba(232,117,43,.16);
+}
+.button-primary:hover{background:#f08438}
+.button-ghost,.nav-cta{
+  border-color:rgba(232,117,43,.30)!important;
+}
+.hero-panel{
+  border-radius:14px;
+  border-color:rgba(255,255,255,.10);
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));
+}
+.signal-row i{background:var(--mw-orange)}
+.scroll-cue b{background:linear-gradient(90deg,var(--mw-orange),transparent)}
+
+.credential-strip{
+  background:#f8f8f7;
+}
+.credential-strip span{color:var(--mw-copper)}
+.credential-strip strong{font-weight:760}
+
+.brand-statement{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:26px;
+  min-height:82px;
+  padding:20px clamp(24px,7vw,110px);
+  background:#0a0c0f;
+  color:var(--mw-orange);
+}
+.brand-statement p{
+  margin:0;
+  white-space:nowrap;
+  font-size:10px;
+  font-weight:850;
+  letter-spacing:.32em;
+}
+.brand-statement-rule{
+  height:1px;
+  flex:1;
+  max-width:240px;
+  background:linear-gradient(90deg,transparent,rgba(232,117,43,.48));
+}
+.brand-statement-rule:last-child{
+  background:linear-gradient(90deg,rgba(232,117,43,.48),transparent);
+}
+
+.service-card{
+  border-radius:8px;
+  background:#fff;
+  box-shadow:none;
+}
+.service-card:hover{
+  border-color:rgba(232,117,43,.35);
+  box-shadow:0 24px 60px rgba(20,18,16,.08);
+}
+.service-index{
+  color:var(--mw-copper);
+  border-color:rgba(201,99,43,.25);
+}
+
+.government{
+  background:
+    radial-gradient(circle at 90% 12%,rgba(232,117,43,.08),transparent 30%),
+    #090c10;
+}
+.capability{
+  border-radius:8px;
+  background:rgba(255,255,255,.025);
+}
+.capability-icon{
+  border-color:rgba(232,117,43,.32);
+}
+.category-band{
+  border-radius:8px;
+  border-color:rgba(232,117,43,.18);
+  background:linear-gradient(135deg,rgba(232,117,43,.07),rgba(255,255,255,.02));
+}
+.process-step b{
+  border-color:rgba(232,117,43,.32);
+}
+
+.supplier-card{
+  border-radius:10px;
+  background:#101419;
+  border-top:2px solid var(--mw-orange);
+}
+.supplier-note{
+  background:rgba(232,117,43,.07);
+}
+.supplier-note strong{color:#fff1e7}
+
+.contact{
+  background:
+    radial-gradient(circle at 10% 100%,rgba(232,117,43,.09),transparent 35%),
+    linear-gradient(145deg,#07090b,#10151b);
+}
+.contact-row b{color:var(--mw-orange)}
+
+.footer-logo{
+  width:190px;
+  height:66px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+}
+.footer-logo img{
+  width:190px;
+  height:auto;
+  transform:scale(1.35);
+}
+
+@media(max-width:640px){
+  .site-header{height:74px}
+  .brand-logo{width:160px;height:60px}
+  .brand-logo img{width:160px}
+  .hero{padding-top:112px}
+  .brand-statement{gap:12px}
+  .brand-statement p{font-size:8px;letter-spacing:.20em}
+  .footer-logo{width:165px}
+  .footer-logo img{width:165px}
+}
