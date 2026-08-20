@@ -1318,3 +1318,381 @@ footer{
   .hero-copy{font-size:17px !important}
   .category-tags,.category-pills{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
 }
+
+
+/* =========================================================
+   MR.WHEELS — FINAL V2 refinements
+   ========================================================= */
+
+/* Supply category grid: fill the full width cleanly */
+.category-tags,
+.category-pills{
+  grid-template-columns:repeat(8,minmax(0,1fr)) !important;
+  gap:10px !important;
+}
+.category-tags span,
+.category-pills span{
+  min-height:50px !important;
+  padding:10px 12px !important;
+  font-size:12.5px !important;
+  font-weight:750 !important;
+  line-height:1.2 !important;
+  letter-spacing:.005em !important;
+}
+
+/* Process redesign for stronger readability */
+.process-upgraded{
+  margin-top:62px !important;
+  padding-top:6px;
+}
+.process-upgraded .process-line{
+  top:25px !important;
+  left:6% !important;
+  right:6% !important;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(240,106,0,.30) 8%,
+    rgba(255,255,255,.14) 50%,
+    rgba(240,106,0,.30) 92%,
+    transparent
+  ) !important;
+}
+.process-upgraded .process-step{
+  min-height:120px;
+  padding:0 10px;
+}
+.process-upgraded .process-step b{
+  width:50px !important;
+  height:50px !important;
+  background:#0b0e11 !important;
+  border:1px solid rgba(240,106,0,.62) !important;
+  color:#ff7a18 !important;
+  box-shadow:0 0 0 5px rgba(240,106,0,.04);
+  margin-bottom:18px !important;
+  font-size:11px !important;
+}
+.process-upgraded .process-step strong{
+  color:#fff !important;
+  font:800 13px/1.25 Arial,Helvetica,sans-serif !important;
+  letter-spacing:.035em !important;
+  min-height:34px;
+}
+.process-upgraded .process-step span{
+  color:rgba(255,255,255,.50) !important;
+  font:700 9px/1.45 Arial,Helvetica,sans-serif !important;
+  letter-spacing:.075em !important;
+  margin-top:7px !important;
+}
+
+@media(max-width:1180px){
+  .category-tags,
+  .category-pills{
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  }
+}
+@media(max-width:760px){
+  .category-tags,
+  .category-pills{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+  .process-upgraded{
+    grid-template-columns:1fr !important;
+  }
+  .process-upgraded .process-line{
+    left:25px !important;
+    right:auto !important;
+    top:0 !important;
+    bottom:0 !important;
+    width:1px !important;
+    height:auto !important;
+  }
+  .process-upgraded .process-step{
+    display:grid !important;
+    grid-template-columns:50px 1fr !important;
+    grid-template-rows:auto auto !important;
+    column-gap:16px !important;
+    text-align:left !important;
+    padding:10px 0 !important;
+    min-height:0 !important;
+  }
+  .process-upgraded .process-step b{
+    grid-row:1 / span 2;
+    margin:0 !important;
+  }
+  .process-upgraded .process-step strong{
+    min-height:0 !important;
+    align-self:end;
+  }
+  .process-upgraded .process-step span{
+    align-self:start;
+  }
+}
+
+
+/* =========================================================
+   MR.WHEELS — PRODUCTION FINAL OVERRIDES
+   Carefully consolidated from approved visual direction.
+   ========================================================= */
+
+:root{
+  --final-orange:#f36a00;
+  --final-orange-bright:#ff7a18;
+  --final-black:#050608;
+  --final-panel:#0a0d10;
+}
+
+/* HEADER — larger real logo, stronger navigation */
+.site-header{
+  height:100px !important;
+  padding:0 clamp(28px,4.4vw,76px) !important;
+  background:#050608 !important;
+}
+.brand-logo{
+  width:245px !important;
+  height:88px !important;
+  overflow:visible !important;
+  flex:0 0 auto;
+}
+.brand-logo img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  transform:none !important;
+}
+.main-nav{
+  gap:34px !important;
+}
+.main-nav a{
+  color:#fff !important;
+  opacity:1 !important;
+  font:750 15px/1 Arial,Helvetica,sans-serif !important;
+  letter-spacing:.005em !important;
+}
+.main-nav .nav-cta{
+  min-width:118px;
+  min-height:46px;
+  padding:0 22px !important;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--final-orange) !important;
+  border-radius:999px !important;
+}
+
+/* HERO — approved composition */
+.hero{
+  min-height:640px !important;
+  padding:150px clamp(28px,5.2vw,82px) 78px !important;
+  background:
+    linear-gradient(90deg,rgba(2,3,4,.95) 0%,rgba(2,3,4,.78) 31%,rgba(2,3,4,.34) 58%,rgba(2,3,4,.22) 100%),
+    url("government-contract-fulfillment.png") center 48% / cover no-repeat !important;
+}
+.hero-content{
+  max-width:590px !important;
+}
+.hero h1{
+  font:850 clamp(52px,5.2vw,80px)/1.00 Arial,Helvetica,sans-serif !important;
+  letter-spacing:-.035em !important;
+}
+.hero-copy{
+  max-width:540px !important;
+  font:500 clamp(17px,1.35vw,21px)/1.52 Arial,Helvetica,sans-serif !important;
+}
+.hero-actions .button-primary{
+  min-height:52px !important;
+  padding:0 25px !important;
+  border-radius:6px !important;
+  font-size:13px !important;
+  font-weight:850 !important;
+}
+
+/* AUTOMOTIVE — professional scale, not oversized */
+.split-intro{
+  padding-top:92px !important;
+  padding-bottom:92px !important;
+}
+.split-intro .section-label{
+  margin-bottom:52px !important;
+}
+.split-intro h2{
+  max-width:720px !important;
+  font:850 clamp(42px,4.3vw,66px)/1.01 Arial,Helvetica,sans-serif !important;
+  letter-spacing:-.035em !important;
+}
+.split-intro .lead{
+  font:500 clamp(19px,1.55vw,24px)/1.52 Arial,Helvetica,sans-serif !important;
+}
+.split-intro .split-copy p:not(.lead){
+  font-size:15px !important;
+  line-height:1.72 !important;
+}
+
+/* All automotive card headings identical */
+.visual-service-grid .service-card h3,
+.visual-service-grid .service-card:nth-child(4) h3{
+  margin:0 0 11px !important;
+  color:#0b0f14 !important;
+  font:850 17px/1.22 Arial,Helvetica,sans-serif !important;
+  letter-spacing:.04em !important;
+  text-transform:uppercase !important;
+}
+.visual-service-grid .card-body{
+  min-height:196px !important;
+  padding:22px 24px 25px !important;
+}
+.visual-service-grid .card-image{
+  height:205px !important;
+}
+
+/* GOVERNMENT SOLUTIONS — preserve approved cards */
+.government .section-label{
+  margin-bottom:34px !important;
+  font:850 clamp(30px,2.8vw,44px)/1 Arial,Helvetica,sans-serif !important;
+}
+.capability-grid-visual{
+  gap:12px !important;
+}
+.capability-visual{
+  min-height:420px !important;
+}
+.capability-image{
+  height:214px !important;
+}
+.capability-body h3{
+  font-size:16px !important;
+}
+.capability-body p{
+  font-size:13.5px !important;
+}
+
+/* VIDEOS — force consistent landscape players */
+.motion-grid{
+  align-items:stretch !important;
+}
+.motion-card{
+  display:flex !important;
+  flex-direction:column !important;
+}
+.motion-media{
+  width:100% !important;
+  aspect-ratio:16 / 9 !important;
+  min-height:0 !important;
+  overflow:hidden !important;
+}
+.motion-media iframe{
+  width:100% !important;
+  height:100% !important;
+  min-height:100% !important;
+}
+.motion-copy{
+  flex:1;
+}
+
+/* SUPPLY CATEGORIES — full 3x8 grid, close to approved mockup */
+.category-band{
+  margin-top:38px !important;
+  padding:28px 0 10px !important;
+}
+.category-band h3{
+  font:850 clamp(29px,2.45vw,40px)/1.06 Arial,Helvetica,sans-serif !important;
+  letter-spacing:-.018em !important;
+}
+.category-tags,
+.category-pills{
+  grid-template-columns:repeat(8,minmax(0,1fr)) !important;
+  gap:10px !important;
+}
+.category-tags span,
+.category-pills span{
+  position:relative;
+  min-height:50px !important;
+  justify-content:flex-start !important;
+  padding:10px 12px 10px 30px !important;
+  color:#fff !important;
+  border:1px solid rgba(255,255,255,.22) !important;
+  border-radius:7px !important;
+  background:#0a0d10 !important;
+  font:700 11.5px/1.2 Arial,Helvetica,sans-serif !important;
+  text-align:left !important;
+}
+.category-tags span::before,
+.category-pills span::before{
+  content:"";
+  position:absolute;
+  left:12px;
+  top:50%;
+  width:8px;
+  height:8px;
+  transform:translateY(-50%) rotate(45deg);
+  border:1px solid var(--final-orange);
+  border-radius:1px;
+  box-shadow:0 0 0 2px rgba(243,106,0,.05);
+}
+
+/* 5-step process — readable, compact and premium */
+.process-upgraded{
+  margin-top:58px !important;
+  padding:18px 0 2px !important;
+}
+.process-upgraded .process-line{
+  top:43px !important;
+}
+.process-upgraded .process-step{
+  min-height:138px !important;
+}
+.process-upgraded .process-step b{
+  width:52px !important;
+  height:52px !important;
+  font-size:11px !important;
+  margin-bottom:19px !important;
+}
+.process-upgraded .process-step strong{
+  min-height:36px !important;
+  color:#fff !important;
+  font:850 13px/1.25 Arial,Helvetica,sans-serif !important;
+  letter-spacing:.035em !important;
+}
+.process-upgraded .process-step span{
+  max-width:210px;
+  margin:7px auto 0 !important;
+  color:rgba(255,255,255,.57) !important;
+  font:700 9px/1.5 Arial,Helvetica,sans-serif !important;
+  letter-spacing:.07em !important;
+}
+
+/* Responsive */
+@media(max-width:1220px){
+  .brand-logo{width:210px !important}
+  .main-nav{gap:21px !important}
+  .main-nav a{font-size:13px !important}
+  .category-tags,.category-pills{
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  }
+}
+@media(max-width:760px){
+  .site-header{
+    height:82px !important;
+    padding:0 16px !important;
+  }
+  .brand-logo{
+    width:176px !important;
+    height:70px !important;
+  }
+  .hero{
+    min-height:610px !important;
+    padding:125px 20px 65px !important;
+  }
+  .hero h1{
+    font-size:46px !important;
+  }
+  .split-intro h2{
+    font-size:40px !important;
+  }
+  .visual-service-grid .card-image{
+    height:220px !important;
+  }
+  .category-tags,.category-pills{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}

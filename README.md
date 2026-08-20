@@ -1,16 +1,18 @@
-# MR.WHEELS — Mockup-Aligned Final Build
+# MR.WHEELS — Production Final
 
-This version aligns the live site more closely with the approved visual direction:
-- Larger official MR.WHEELS logo
-- Larger, more readable navigation
-- Hero image with military logistics visual
-- Bold uppercase hero messaging
-- Government Supply Solutions as the central visual section
-- Image-based capability cards
-- SUPPLY CATEGORIES uses uppercase VEHICLE • AEROSPACE • MECHANICAL • INDUSTRIAL
-- Expanded high-value component category grid
-- Black / graphite / orange corporate visual system
-- Responsive desktop/mobile treatment
+This build consolidates the approved visual direction and requested final refinements.
 
-Upload all extracted files to the root of the existing GitHub repository.
+Included:
+- Cropped official MR.WHEELS logo so the header logo is genuinely larger and readable
+- Stronger, more readable navigation
+- Approved military-logistics hero with “ENGINEERED PARTS. MISSION READY. DELIVERED.”
+- Government Supply Solutions cards preserved
+- Automotive section upgraded to more corporate wording
+- All four automotive card headings standardized in uppercase, same size/weight
+- 24 high-value supply categories in a balanced 3x8 desktop grid
+- Improved five-step sourcing / validation / execution workflow
+- Replaced the disliked vertical CNC video with a landscape machining video
+- Responsive desktop and mobile treatment
+
+Upload every extracted file to the root of the existing GitHub repository.
 Vercel will redeploy automatically after commit.
