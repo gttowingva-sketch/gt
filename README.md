@@ -1,12 +1,11 @@
-# MR.WHEELS Website V3
+# MR.WHEELS Website V3.3
 
-Corporate brand revision using the official MR.WHEELS logo and a restrained copper/orange accent system.
+New in V3.3:
+- Added "Capabilities in Motion" video section inspired by premium aerospace/defense corporate storytelling
+- Four operational video cards: armored vehicles, precision manufacturing, quality inspection, and logistics
+- Uses U.S. DoD/DVIDS public-domain footage with a clear non-endorsement note
+- Responsive 2-column desktop / 1-column mobile layout
+- Retains all V3.2 Automotive imagery and V3.1 brand refinements
 
-Upload all files in this folder directly to the root of the existing GitHub repository:
-- index.html
-- styles.css
-- main.js
-- favicon.svg
-- mr-wheels-logo.png
-
-Vercel will redeploy automatically after the GitHub commit.
+Upload the extracted files to the root of the existing GitHub repository.
+Vercel will redeploy automatically after commit.
