@@ -1838,6 +1838,130 @@ footer{
   aspect-ratio:16/9 !important;
   background:#000 !important;
 }
+
+/* =========================================================
+   MR.WHEELS — APPROVED VISUAL INTEGRATION
+   Hero, automotive, government, motion and supplier imagery
+   ========================================================= */
+
+/* Hero: photograph stays on the right and disappears into black before copy. */
+.hero{
+  background:
+    linear-gradient(90deg,#020304 0%,rgba(2,3,4,.98) 26%,rgba(2,3,4,.78) 42%,rgba(2,3,4,.30) 69%,rgba(2,3,4,.18) 100%),
+    linear-gradient(0deg,rgba(2,3,4,.78) 0%,transparent 34%),
+    url("hero-military-vehicles.png") right center / 64% 100% no-repeat,
+    #020304 !important;
+}
+
+/* Automotive cards: one editorial grade and a close truck-focused fleet crop. */
+.visual-service-grid .card-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(0deg,rgba(6,8,10,.34),transparent 42%);
+  border-bottom:2px solid rgba(243,106,0,.9);
+}
+.visual-service-grid .card-image img{
+  filter:saturate(.82) contrast(1.07) brightness(.94);
+}
+.visual-service-grid .fleet-card-image img{
+  width:138%;
+  max-width:none;
+  object-position:left center;
+  filter:saturate(.76) contrast(1.10) brightness(.90) sepia(.08);
+}
+
+/* Government cards: consistent warm-charcoal image treatment. */
+.capability-grid-visual .capability-image::after{
+  background:linear-gradient(0deg,rgba(7,9,11,.82) 0%,rgba(7,9,11,.06) 68%) !important;
+  border-bottom:1px solid rgba(243,106,0,.52);
+}
+.capability-grid-visual .capability-image img{
+  filter:saturate(.66) contrast(1.10) brightness(.88) sepia(.10) !important;
+}
+.capability-grid-visual .capability-visual:last-child .capability-image img{
+  object-position:center 56%;
+}
+
+/* Still and motion media share one visual language. */
+.motion-media img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:saturate(.68) contrast(1.12) brightness(.80) sepia(.12);
+  transition:transform .45s ease,filter .45s ease;
+}
+.motion-card:hover .motion-media img{
+  transform:scale(1.025);
+  filter:saturate(.76) contrast(1.12) brightness(.86) sepia(.10);
+}
+.motion-card:first-child .motion-media img{object-position:center 54%}
+.motion-card:last-child .motion-media img{object-position:center 58%}
+.motion-media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(0deg,rgba(6,8,10,.48),transparent 43%);
+}
+.motion-number{z-index:2}
+
+/* Supplier network: light copy field flows into a real logistics backdrop. */
+.suppliers{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:#f2f3f4 !important;
+}
+.suppliers::before{
+  content:"";
+  position:absolute;
+  z-index:-2;
+  inset:0;
+  background:url("supplier-logistics-background.jpg") right center / 64% 100% no-repeat;
+  filter:saturate(.58) contrast(1.08) brightness(.84) sepia(.12);
+  transform:scale(1.01);
+}
+.suppliers::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  background:linear-gradient(90deg,#f2f3f4 0%,rgba(242,243,244,.99) 33%,rgba(242,243,244,.90) 45%,rgba(242,243,244,.38) 61%,rgba(5,7,9,.16) 100%);
+}
+.suppliers > *{position:relative;z-index:1}
+.supplier-card-final{
+  background:rgba(8,11,14,.94) !important;
+  backdrop-filter:blur(8px);
+  box-shadow:0 30px 80px rgba(3,5,7,.34) !important;
+}
+
+@media(max-width:980px){
+  .hero{
+    background:
+      linear-gradient(90deg,#020304 0%,rgba(2,3,4,.95) 45%,rgba(2,3,4,.52) 100%),
+      linear-gradient(0deg,rgba(2,3,4,.82),transparent 45%),
+      url("hero-military-vehicles.png") 70% center / auto 100% no-repeat,
+      #020304 !important;
+  }
+  .suppliers::before{background-size:auto 100%;background-position:66% center;opacity:.42}
+  .suppliers::after{background:rgba(242,243,244,.88)}
+}
+
+@media(max-width:760px){
+  .hero{
+    background:
+      linear-gradient(90deg,rgba(2,3,4,.98),rgba(2,3,4,.72)),
+      linear-gradient(0deg,rgba(2,3,4,.92),rgba(2,3,4,.18)),
+      url("hero-military-vehicles.png") 68% center / auto 100% no-repeat,
+      #020304 !important;
+  }
+  .visual-service-grid .fleet-card-image img{width:145%}
+  .suppliers::before{background-position:60% center;opacity:.28}
+  .supplier-card-final{background:rgba(8,11,14,.97) !important}
+}
 .motion-media iframe{
   display:block !important;
   width:100% !important;
