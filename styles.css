@@ -1436,6 +1436,154 @@ footer{
   .footer-divisions{white-space:normal;line-height:1.7}
 }
 
+/* =========================================================
+   FEDERAL CONTRACTOR INFORMATION
+   ========================================================= */
+.federal-credentials{
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 12% 0%,rgba(240,106,0,.17),transparent 32%),
+    radial-gradient(circle at 88% 100%,rgba(173,75,0,.13),transparent 34%),
+    linear-gradient(145deg,#07090b 0%,#0d1115 52%,#07090b 100%);
+  border-top:1px solid rgba(240,106,0,.62);
+  border-bottom:1px solid rgba(240,106,0,.28);
+  padding:82px clamp(24px,7vw,110px) 58px;
+}
+.federal-credentials::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.28;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:34px 34px;
+  mask-image:linear-gradient(to bottom,black,transparent 82%);
+}
+.federal-credentials-inner{
+  position:relative;
+  z-index:1;
+  width:min(1180px,100%);
+  margin:0 auto;
+}
+.federal-credentials-heading{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);
+  column-gap:64px;
+  align-items:end;
+  margin-bottom:36px;
+}
+.federal-kicker{
+  grid-column:1/-1;
+  margin:0 0 14px;
+  color:var(--mw-orange);
+  font:800 11px/1.2 Arial,Helvetica,sans-serif;
+  letter-spacing:.22em;
+}
+.federal-credentials h2{
+  margin:0;
+  color:#fff;
+  font:900 clamp(30px,3.3vw,48px)/1.02 Arial,Helvetica,sans-serif;
+  letter-spacing:-.035em;
+}
+.federal-intro{
+  margin:0;
+  color:rgba(255,255,255,.58);
+  font:400 15px/1.65 Arial,Helvetica,sans-serif;
+}
+.federal-credential-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  border:1px solid rgba(255,255,255,.10);
+  border-top:2px solid var(--mw-orange);
+  background:rgba(3,5,7,.38);
+  box-shadow:0 28px 80px rgba(0,0,0,.28);
+}
+.federal-credential-card{
+  min-height:210px;
+  padding:28px 25px 26px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  border-right:1px solid rgba(255,255,255,.10);
+  transition:background .25s ease,transform .25s ease;
+}
+.federal-credential-card:last-child{border-right:0}
+.federal-credential-card:hover{
+  background:rgba(240,106,0,.07);
+  transform:translateY(-3px);
+}
+.federal-card-icon{
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  margin-bottom:30px;
+  color:var(--mw-orange);
+  border:1px solid rgba(240,106,0,.42);
+  background:rgba(240,106,0,.08);
+}
+.federal-card-icon svg{
+  width:23px;
+  height:23px;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.federal-card-label{
+  margin-bottom:8px;
+  color:rgba(255,255,255,.46);
+  font:800 10px/1.2 Arial,Helvetica,sans-serif;
+  letter-spacing:.16em;
+}
+.federal-credential-card strong{
+  color:#fff;
+  font:850 clamp(16px,1.45vw,21px)/1.18 Arial,Helvetica,sans-serif;
+  letter-spacing:.015em;
+  overflow-wrap:anywhere;
+}
+.federal-credential-card small{
+  margin-top:8px;
+  color:rgba(255,255,255,.48);
+  font:500 11px/1.45 Arial,Helvetica,sans-serif;
+}
+.federal-status-card strong{color:#ff8a32}
+.federal-disclaimer{
+  margin:22px 0 0;
+  color:rgba(255,255,255,.32);
+  font:400 10px/1.55 Arial,Helvetica,sans-serif;
+  letter-spacing:.015em;
+}
+
+@media(max-width:980px){
+  .federal-credentials-heading{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  .federal-credential-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .federal-credential-card:nth-child(2){border-right:0}
+  .federal-credential-card:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.10)}
+}
+
+@media(max-width:600px){
+  .federal-credentials{padding:68px 20px 44px}
+  .federal-credentials h2{font-size:34px}
+  .federal-intro{font-size:14px}
+  .federal-credential-grid{grid-template-columns:1fr}
+  .federal-credential-card{
+    min-height:0;
+    padding:24px 22px;
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.10);
+  }
+  .federal-credential-card:last-child{border-bottom:0}
+  .federal-card-icon{margin-bottom:22px}
+}
+
 /* Supplier photo fades into the following light section instead of ending abruptly. */
 .suppliers::after{
   background:
