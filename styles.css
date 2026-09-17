@@ -1710,6 +1710,110 @@ footer{
   .console-legal p:last-child{margin-top:10px !important;text-align:left}
 }
 
+/* Five-station contractor panel — matches the original MR.WHEELS concept */
+.console-info{
+  min-height:370px;
+  grid-template-columns:175px minmax(0,1fr) 190px;
+  padding-top:34px;
+  padding-bottom:30px;
+}
+.console-side-note{
+  color:rgba(198,205,211,.62) !important;
+  font-size:10px !important;
+  line-height:1.72 !important;
+  letter-spacing:.28em !important;
+}
+.console-primary{align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+.console-heading{margin-bottom:27px}
+.console-credentials{
+  width:min(1120px,100%);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  align-items:start;
+}
+.console-id-card{
+  position:relative;
+  min-width:0;
+  padding:0 22px;
+  text-align:center;
+}
+.console-id-card + .console-id-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:20px;
+  width:1px;
+  height:118px;
+  background:linear-gradient(transparent,rgba(239,108,0,.48) 18%,rgba(239,108,0,.48) 82%,transparent);
+}
+.console-id-card .cage-reticle{
+  width:104px;
+  height:104px;
+  margin:0 auto 17px;
+}
+.console-id-card .cage-reticle::before{width:126px;left:-12px;top:51px}
+.console-id-card .cage-reticle::after{height:126px;left:51px;top:-12px}
+.console-id-card .cage-reticle svg{width:66px;height:66px}
+.console-id-card p{
+  min-height:12px;
+  margin:0 0 8px !important;
+  color:rgba(229,232,235,.72) !important;
+  font:750 10px/1.25 Arial,Helvetica,sans-serif !important;
+  letter-spacing:.17em !important;
+  white-space:nowrap;
+}
+.console-id-card strong{
+  display:block;
+  color:#fff;
+  font:900 25px/1 Arial,Helvetica,sans-serif;
+  letter-spacing:.12em;
+  text-indent:.12em;
+  white-space:nowrap;
+}
+.console-id-card .uei-value{
+  padding-top:3px;
+  font-size:15px;
+  letter-spacing:.08em;
+}
+.console-id-card small{
+  display:block;
+  min-height:10px;
+  margin-top:8px;
+  color:var(--console-orange);
+  font:750 8px/1.3 Arial,Helvetica,sans-serif;
+  letter-spacing:.16em;
+}
+.console-capability small{
+  margin-top:0;
+  color:rgba(184,190,196,.48);
+}
+
+@media(max-width:1180px){
+  .console-info{grid-template-columns:1fr;padding-left:28px;padding-right:28px}
+  .console-side-note{display:none}
+  .console-id-card{padding:0 12px}
+  .console-id-card p{font-size:9px !important;letter-spacing:.12em !important}
+}
+
+@media(max-width:820px){
+  .console-info{min-height:0;padding-top:42px;padding-bottom:42px}
+  .console-credentials{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 0}
+  .console-id-card:last-child{grid-column:1/-1;width:50%;justify-self:center}
+  .console-id-card:nth-child(odd)::before{display:none}
+  .console-id-card + .console-id-card::before{height:108px}
+}
+
+@media(max-width:520px){
+  .console-heading{margin-bottom:30px}
+  .console-credentials{grid-template-columns:1fr;gap:31px}
+  .console-id-card{width:100% !important;grid-column:auto !important}
+  .console-id-card + .console-id-card::before{display:none}
+  .console-id-card .cage-reticle{width:98px;height:98px}
+  .console-id-card .cage-reticle::before{width:118px;top:48px;left:-10px}
+  .console-id-card .cage-reticle::after{height:118px;left:48px;top:-10px}
+}
+
 /* =========================================================
    FEDERAL SUPPLIER SIGNATURE
    ========================================================= */
