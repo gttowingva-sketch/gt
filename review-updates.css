@@ -1,0 +1,74 @@
+/* Review batch: six requested updates, not yet published. */
+.section-label{font-size:14px!important}
+.site-header .brand-logo{width:360px!important;height:88px!important;display:flex!important;gap:14px;overflow:visible!important;flex-shrink:0}
+.brand-compass{width:72px;height:72px;flex:0 0 72px;color:#b66a28;stroke-width:1;opacity:.85}
+.brand-lockup{display:flex;flex-direction:column;gap:9px;min-width:0;width:274px}
+.site-header .brand-lockup img{width:100%!important;height:auto!important;mix-blend-mode:screen!important;object-fit:contain!important}
+.brand-lockup>span{font:600 8px/1.5 Arial,sans-serif;letter-spacing:.10em;color:#c0c6cc;white-space:nowrap}
+.brand-lockup b{color:#e8752b;margin:0 3px}
+.console-info{width:100%;grid-template-columns:140px minmax(0,1fr) 140px;padding:36px 4vw;gap:22px;min-height:320px}
+.console-side-note{font-size:12px!important;letter-spacing:.15em!important}
+.console-heading{grid-template-columns:minmax(15px,80px) auto minmax(15px,80px);gap:15px}
+.console-heading h2{font-size:clamp(16px,1.5vw,24px);letter-spacing:.18em;white-space:normal}
+.console-id-card{padding:0 10px}
+.console-id-card p{font-size:12px!important;white-space:normal;min-height:30px}
+.console-id-card small{font-size:10px;line-height:1.5}
+.console-id-card strong{font-size:26px}
+.console-id-card .uei-value{font-size:17px;letter-spacing:.03em}
+.console-brand-band{isolation:isolate;grid-template-columns:minmax(0,1.25fr) 1px minmax(0,.9fr) minmax(240px,.9fr);gap:28px;padding:38px 4vw;min-height:228px;overflow:hidden}
+.console-brand{position:relative;min-width:0;padding-left:64px}
+.footer-compass{position:absolute;width:130px;height:130px;left:-76px;top:50%;transform:translateY(-50%);color:#b36b2d;opacity:.6;stroke-width:.7}
+.console-brand img{width:100%;max-width:480px;height:auto;mix-blend-mode:screen}
+.console-brand p{font-size:11px!important;letter-spacing:.12em!important;line-height:1.6!important;margin:13px 0 0!important;text-align:left!important}
+.console-divider{height:92px}
+.console-promise span{font-size:11px;line-height:1.9;letter-spacing:.12em}
+.console-promise p{font-size:12px!important;line-height:1.8!important;letter-spacing:.12em!important;text-align:left!important}
+.console-global{display:flex;position:relative;align-self:stretch;align-items:center;justify-content:flex-end;justify-self:stretch;min-height:160px;border:0;padding:0 15px;isolation:isolate}
+.console-earth{position:absolute;z-index:-1;right:-180px;top:0;width:520px;max-width:none;height:347px;object-fit:cover;opacity:.95;mask-image:linear-gradient(90deg,transparent,#000 24%);pointer-events:none}
+.console-global span{font-size:12px;line-height:1.8;letter-spacing:.16em;color:#d3d9df;text-shadow:0 2px 5px #000}
+.console-legal{padding:18px 4vw}
+.console-legal p{font-size:10px!important;line-height:1.7!important;color:#959ea6!important}
+.process-upgraded .process-step strong,.process-upgraded .process-step span{width:100%;box-sizing:border-box}
+@media(max-width:1200px){
+ .site-header .brand-logo{width:292px!important;gap:10px}
+ .brand-compass{width:56px;height:56px;flex-basis:56px}
+ .brand-lockup{width:226px}
+ .brand-lockup>span{font-size:6.5px}
+ .main-nav{gap:16px!important}
+ .main-nav a{font-size:12px!important}
+ .console-info{grid-template-columns:1fr}
+ .console-side-note{display:none}
+ .console-brand-band{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
+ .console-divider{display:none}
+ .console-global{grid-column:2;grid-row:1/3;min-height:225px}
+ .console-earth{width:560px;height:373px;top:25px;right:-190px}
+ .console-promise{grid-column:1}
+}
+@media(max-width:760px){
+ .site-header .brand-logo{width:280px!important;height:78px!important}
+ .brand-lockup{width:214px}
+ .brand-lockup>span{font-size:6.2px}
+ .section-label{font-size:13px!important}
+ .process-upgraded{display:grid!important;grid-template-columns:1fr!important;gap:30px!important;position:relative;padding:15px 0!important}
+ .process-upgraded .process-line{top:15px!important;bottom:15px!important;left:26px!important;width:1px!important;height:auto!important}
+ .process-upgraded .process-step{display:grid!important;grid-template-columns:52px minmax(0,1fr)!important;grid-template-rows:auto auto!important;column-gap:24px!important;row-gap:10px!important;min-height:100px!important;align-content:start!important;text-align:left!important;padding:0!important}
+ .process-upgraded .process-step b{grid-column:1!important;grid-row:1/3!important;align-self:start!important;margin:0!important}
+ .process-upgraded .process-step strong{grid-column:2!important;grid-row:1!important;min-height:0!important;align-self:start!important;margin:8px 0 0!important;font-size:14px!important;text-align:left!important}
+ .process-upgraded .process-step span{grid-column:2!important;grid-row:2!important;max-width:none!important;align-self:start!important;justify-self:start!important;margin:0!important;font-size:11px!important;text-align:left!important}
+ .console-brand-band{display:flex;flex-direction:column;align-items:stretch;padding:32px 24px;gap:30px}
+ .console-brand{padding-left:38px}
+ .footer-compass{width:96px;height:96px;left:-58px}
+ .console-brand p{font-size:10px!important}
+ .console-promise span{display:block}
+ .console-promise i{display:block}
+ .console-global{min-height:200px;padding-right:25px}
+ .console-earth{width:450px;height:300px;right:-135px;top:10px}
+ .console-legal p{font-size:10px!important}
+ .console-id-card p{min-height:0}
+}
+@media(max-width:380px){
+ .site-header .brand-logo{width:248px!important;gap:8px}
+ .brand-compass{flex-basis:46px;width:46px;height:46px}
+ .brand-lockup{width:194px}
+ .brand-lockup>span{font-size:5.7px}
+}
