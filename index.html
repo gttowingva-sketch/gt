@@ -9,6 +9,13 @@
   <link rel="icon" href="favicon-target-clear.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="review-updates.css?v=3" />
+  <style>
+    .approved-mockup-section{background:#070b0e;width:100%;padding:0;margin:0;overflow:hidden}
+    .approved-mockup-section img{display:block;width:100%;height:auto;margin:0}
+    .automotive-approved{border-top:1px solid rgba(255,255,255,.08)}
+    .government-approved{border-top:1px solid rgba(255,122,0,.25)}
+    @media(max-width:700px){.approved-mockup-section{overflow-x:auto}.approved-mockup-section img{min-width:980px}}
+  </style>
 </head>
 <body>
   <header class="site-header" id="top">
@@ -91,108 +98,14 @@
       <div class="brand-statement-rule"></div>
     </section>
 
-    <section class="split-intro section" id="automotive">
-      <div class="section-label reveal">01 / AUTOMOTIVE SERVICES</div>
-      <div class="split-copy">
-        <div class="reveal">
-          <p class="eyebrow">AUTOMOTIVE • DEALERSHIP • FLEET</p>
-          <h2>AUTOMOTIVE APPEARANCE SOLUTIONS FOR PROFESSIONAL OPERATIONS.</h2>
-        </div>
-        <div class="reveal delay-1">
-          <p class="lead">
-            MR.WHEELS provides tailored automotive solutions for dealership groups, fleet operators, and corporate automotive partners.
-          </p>
-          <p>
-            Through on-site wheel repair, refinishing, and reconditioning support, we help our partners reduce downtime, improve vehicle presentation, and keep inventory ready for sale.
-          </p>
-        </div>
-      </div>
-
-      <div class="service-grid visual-service-grid">
-        <article class="service-card visual-card reveal">
-          <div class="card-image"><img src="automotive-dealership-v2.jpg" alt="Automotive dealership service support" /></div>
-          <div class="card-body"><span class="service-index">A</span><h3>DEALERSHIP SUPPORT</h3><p>Support for dealership inventory and reconditioning workflows.</p></div>
-        </article>
-        <article class="service-card visual-card reveal delay-1">
-          <div class="card-image fleet-card-image"><img src="automotive-fleet-v2.webp" alt="Commercial fleet vehicles" loading="lazy" /></div>
-          <div class="card-body"><span class="service-index">B</span><h3>FLEET &amp; PARTNER SERVICES</h3><p>Flexible, recurring services for fleet operators and automotive partners, with reliable turnaround times.</p></div>
-        </article>
-        <article class="service-card visual-card reveal delay-2">
-          <div class="card-image"><img src="automotive-wheel-repair.jpg" alt="Wheel repair service" /></div>
-          <div class="card-body"><span class="service-index">C</span><h3>ALLOY WHEEL RESTORATION</h3><p>Cosmetic wheel restoration for curb rash, surface damage and finish defects.</p></div>
-        </article>
-        <article class="service-card visual-card reveal delay-3">
-          <div class="card-image"><img src="automotive-refinishing-v2.webp" alt="Alloy wheel refinishing process" /></div>
-          <div class="card-body"><span class="service-index">D</span><h3>WHEEL REFINISHING</h3><p>Complete wheel refinishing, color changes and appearance restoration.</p></div>
-        </article>
-      </div>
+    <section id="automotive" class="approved-mockup-section automotive-approved">
+      <img src="automotive-final.png" alt="MR.WHEELS Automotive Services" />
     </section>
 
-    <section class="government section dark-section" id="government">
-      <div class="government-backdrop" aria-hidden="true">
-        <div class="orbit orbit-1"></div>
-        <div class="orbit orbit-2"></div>
-        <div class="tech-lines"></div>
-      </div>
+    <section id="government" class="approved-mockup-section government-approved">
+      <img src="government-final.png" alt="MR.WHEELS Government Supply Solutions" />
+    </section>
 
-      <div class="section-label light reveal">GOVERNMENT SUPPLY SOLUTIONS</div>
-      <div class="government-head">
-        <div class="reveal">
-          <p class="eyebrow accent">FEDERAL PROCUREMENT SUPPORT</p>
-          <h2>Source with discipline.<br />Deliver with confidence.</h2>
-        </div>
-        <p class="lead light-copy reveal delay-1">
-          MR.WHEELS evaluates U.S. Government supply requirements and coordinates with manufacturers on sourcing, technical documentation, logistics and delivery.
-        </p>
-      </div>
-
-      
-      <div class="capability-grid capability-grid-visual">
-        <article class="capability capability-visual reveal">
-          <div class="capability-image"><img src="government-requirement-matching.png" alt="Mechanical component, engineering drawings and precision measuring tools" /></div>
-          <div class="capability-body">
-            <div class="capability-icon">NSN</div>
-            <h3>REQUIREMENT MATCHING</h3>
-            <p>Research and sourcing against NSNs, part numbers, drawings, technical data and applicable specifications.</p>
-          </div>
-        </article>
-        <article class="capability capability-visual reveal delay-1">
-          <div class="capability-image"><img src="government-manufacturer-sourcing.png" alt="Industrial manufacturing team reviewing production operations" /></div>
-          <div class="capability-body">
-            <div class="capability-icon">MFG</div>
-            <h3>MANUFACTURER SOURCING</h3>
-            <p>Domestic and international supplier identification with emphasis on established defense and industrial manufacturers.</p>
-          </div>
-        </article>
-        <article class="capability capability-visual reveal delay-2">
-          <div class="capability-image"><img src="government-quality-documentation.jpeg" alt="Digital quality documentation and checklist review" /></div>
-          <div class="capability-body">
-            <div class="capability-icon">QA</div>
-            <h3>QUALITY DOCUMENTATION</h3>
-            <p>Coordination of certificates, inspection records, material data, test reports and lot traceability when required.</p>
-          </div>
-        </article>
-        <article class="capability capability-visual reveal delay-3">
-          <div class="capability-image"><img src="government-contract-fulfillment.png" alt="Military vehicle logistics and vessel loading operation" /></div>
-          <div class="capability-body">
-            <div class="capability-icon">LOG</div>
-            <h3>CONTRACT FULFILLMENT</h3>
-            <p>Supplier coordination, production follow-up, import planning, transportation and delivery scheduling.</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="government-visual reveal">
-        <img src="https://api.army.mil/e2/c/images/2019/09/17/565064/original.jpg" alt="U.S. Army Abrams armored vehicle during training" />
-        <div class="government-visual-overlay"></div>
-        <div class="government-visual-copy">
-          <span>VEHICLE &amp; SUSTAINMENT COMPONENTS</span>
-          <h3>Supporting complex supply requirements with disciplined sourcing.</h3>
-          <p>Technical matching • Manufacturer coordination • Documentation • Fulfillment</p>
-        </div>
-      </div>
-
-      
       <div class="motion-section reveal" id="capabilities-motion">
         <div class="motion-heading">
           <div>
