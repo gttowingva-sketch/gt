@@ -14,7 +14,16 @@
     .approved-mockup-section img{display:block;width:100%;height:auto;margin:0}
     .automotive-approved{border-top:1px solid rgba(255,255,255,.08)}
     .government-approved{border-top:1px solid rgba(255,122,0,.25)}
-    @media(max-width:700px){.approved-mockup-section{overflow-x:auto}.approved-mockup-section img{min-width:980px}}
+    .mission-separator{background:#070b0e;padding:72px 4vw;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.09)}
+    .mission-separator-inner{max-width:1600px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(320px,.8fr) minmax(190px,.38fr);align-items:center;gap:42px}
+    .mission-icons{display:grid;grid-template-columns:repeat(6,1fr);align-items:center}
+    .mission-icon{min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border-right:1px solid rgba(255,255,255,.12);color:#d9dcde;font:600 10px/1.2 Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase}
+    .mission-icon:last-child{border-right:0}.mission-icon svg{width:36px;height:36px;stroke:#d9dcde;stroke-width:1.5;fill:none}
+    .mission-tagline{padding-left:36px;border-left:1px solid rgba(255,255,255,.12);color:#c9cccf;font:500 11px/1.8 Arial,sans-serif;letter-spacing:.34em;text-transform:uppercase}.mission-tagline i{display:block;width:34px;height:2px;background:#f26a21;margin-top:12px}
+    .mission-flag{padding-left:32px;border-left:1px solid rgba(255,255,255,.12);color:#8e9499;font:600 9px/1.65 Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase}.flag-lines{width:70px;height:42px;margin-bottom:10px;opacity:.7;background:repeating-linear-gradient(to bottom,#8e9499 0 2px,transparent 2px 5px);position:relative}.flag-lines:before{content:"";position:absolute;left:0;top:0;width:30px;height:23px;background:#8e9499;opacity:.65}
+    .motion-section{margin-top:72px!important}
+    @media(max-width:900px){.mission-separator{padding:48px 22px}.mission-separator-inner{grid-template-columns:1fr;gap:30px}.mission-icons{grid-template-columns:repeat(3,1fr)}.mission-icon:nth-child(3){border-right:0}.mission-tagline,.mission-flag{border-left:0;padding-left:0;text-align:center}.mission-tagline i{margin:12px auto 0}.flag-lines{margin:0 auto 10px}}
+    @media(max-width:700px){.approved-mockup-section{overflow-x:auto}.approved-mockup-section img{min-width:980px}.mission-separator{padding:42px 16px}.mission-icon{min-height:78px;font-size:8px}.mission-icon svg{width:30px;height:30px}.motion-section{margin-top:48px!important}}
   </style>
 </head>
 <body>
@@ -104,6 +113,21 @@
 
     <section id="government" class="approved-mockup-section government-approved">
       <img src="government-final.png" alt="MR.WHEELS Government Supply Solutions" />
+    </section>
+
+    <section class="mission-separator" aria-label="MR.WHEELS mission capabilities">
+      <div class="mission-separator-inner">
+        <div class="mission-icons">
+          <div class="mission-icon"><svg viewBox="0 0 48 48"><path d="M6 29h36M10 29l4-8h20l4 8M15 21v-5h18v5M12 33h24M17 33v4m14-4v4"/></svg><span>Land</span></div>
+          <div class="mission-icon"><svg viewBox="0 0 48 48"><path d="M24 5v38M7 27l17-8 17 8M14 32l10-5 10 5M20 11l4-6 4 6"/></svg><span>Air</span></div>
+          <div class="mission-icon"><svg viewBox="0 0 48 48"><path d="M6 29h36l-6 8H12zM14 29V18h20v11M20 18v-6h8v6M24 12V7"/></svg><span>Sea</span></div>
+          <div class="mission-icon"><svg viewBox="0 0 48 48"><path d="M9 15l15-8 15 8v18l-15 8-15-8zM9 15l15 8 15-8M24 23v18"/></svg><span>Supply</span></div>
+          <div class="mission-icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><path d="M24 5v6m0 26v6M5 24h6m26 0h6M11 11l5 5m16 16 5 5M37 11l-5 5M16 32l-5 5"/></svg><span>Support</span></div>
+          <div class="mission-icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M6 24h36M24 6c6 6 9 12 9 18s-3 12-9 18c-6-6-9-12-9-18s3-12 9-18z"/></svg><span>Global</span></div>
+        </div>
+        <div class="mission-tagline">More than parts.<br>A stronger tomorrow.<i></i></div>
+        <div class="mission-flag"><div class="flag-lines"></div>Federal Supply<br>Global Partners<br>Mission Ready</div>
+      </div>
     </section>
 
       <div class="motion-section reveal" id="capabilities-motion">
