@@ -24,6 +24,119 @@
     .motion-section{margin-top:72px!important}
     @media(max-width:900px){.mission-separator{padding:48px 22px}.mission-separator-inner{grid-template-columns:1fr;gap:30px}.mission-icons{grid-template-columns:repeat(3,1fr)}.mission-icon:nth-child(3){border-right:0}.mission-tagline,.mission-flag{border-left:0;padding-left:0;text-align:center}.mission-tagline i{margin:12px auto 0}.flag-lines{margin:0 auto 10px}}
     @media(max-width:700px){.approved-mockup-section{overflow-x:auto}.approved-mockup-section img{min-width:980px}.mission-separator{padding:42px 16px}.mission-icon{min-height:78px;font-size:8px}.mission-icon svg{width:30px;height:30px}.motion-section{margin-top:48px!important}}
+
+
+    /* === FINAL REVIEW REFINEMENTS === */
+    .hero-auto-transition{
+      height:78px;
+      position:relative;
+      background:
+        radial-gradient(70% 120% at 50% -20%,rgba(242,106,33,.055),transparent 62%),
+        linear-gradient(180deg,#020405 0%,#06090c 45%,#070b0e 100%);
+      border-top:1px solid rgba(255,255,255,.035);
+      border-bottom:1px solid rgba(255,255,255,.055);
+      box-shadow:inset 0 28px 52px rgba(0,0,0,.34);
+    }
+    .hero-auto-transition:after{
+      content:"";position:absolute;left:50%;bottom:18px;transform:translateX(-50%);
+      width:58px;height:1px;background:linear-gradient(90deg,transparent,#f26a21,transparent);opacity:.7
+    }
+    #automotive.automotive-approved{border-top:0;box-shadow:0 -34px 70px rgba(0,0,0,.34)}
+
+    /* Give the mission / capability transition more breathing room. */
+    .mission-separator{
+      margin-top:46px;
+      padding:78px 4vw;
+      background:linear-gradient(180deg,#070b0e 0%,#080c0f 52%,#070b0e 100%);
+    }
+    .mission-separator-inner{
+      grid-template-columns:minmax(0,1fr) minmax(210px,.28fr);
+      gap:54px;
+    }
+    .mission-icons{min-width:0}
+    .mission-flag{justify-self:end;min-width:190px}
+    .motion-section{margin-top:82px!important}
+
+    /* Premium light About section — keeps the visual breathing room without feeling disconnected. */
+    .about.section{
+      position:relative;
+      overflow:hidden;
+      background:#f1f1ef!important;
+      padding-top:102px!important;
+      padding-bottom:112px!important;
+      border-top:1px solid rgba(8,12,16,.1);
+      border-bottom:1px solid rgba(8,12,16,.1);
+    }
+    .about.section:before{
+      content:"";position:absolute;inset:0;pointer-events:none;opacity:.72;
+      background-image:
+        linear-gradient(rgba(12,18,24,.024) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(12,18,24,.024) 1px,transparent 1px),
+        radial-gradient(circle at 84% 22%,rgba(242,106,33,.05),transparent 28%);
+      background-size:42px 42px,42px 42px,auto;
+    }
+    .about.section:after{
+      content:"";position:absolute;width:520px;height:520px;right:-190px;top:30px;border-radius:50%;
+      border:1px solid rgba(12,18,24,.055);box-shadow:0 0 0 74px rgba(12,18,24,.018),0 0 0 148px rgba(12,18,24,.012);pointer-events:none
+    }
+    .about.section > *{position:relative;z-index:1}
+    .about .section-label{border-bottom-color:rgba(12,18,24,.13)!important}
+    .about .about-grid{align-items:start;gap:clamp(54px,7vw,126px)!important}
+    .about .eyebrow{display:flex;align-items:center;gap:14px;letter-spacing:.19em}
+    .about .eyebrow:before{content:"";display:inline-block;width:34px;height:2px;background:#f26a21;flex:0 0 auto}
+    .about .about-copy{max-width:760px}
+    .about .about-copy .lead{max-width:720px;line-height:1.48}
+    .about .about-copy > p:not(.lead){max-width:710px;line-height:1.62}
+    .about-brand-line{
+      display:grid;grid-template-columns:42px 1fr;gap:18px;align-items:center;
+      margin:30px 0 26px;padding:18px 0;
+      border-top:1px solid rgba(12,18,24,.12);border-bottom:1px solid rgba(12,18,24,.12);
+      color:#10151a;font:700 11px/1.75 Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase
+    }
+    .about-brand-line i{display:block;width:42px;height:2px;background:#f26a21}
+    .about-brand-line strong{color:#f26a21;font-weight:800}
+    .about .principles{
+      display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px!important;
+      margin-top:0!important;padding-top:0!important;border-top:0!important
+    }
+    .about .principles > div{
+      position:relative;min-height:114px;padding:42px 20px 18px!important;
+      background:rgba(255,255,255,.58);border:1px solid rgba(12,18,24,.12);
+      box-shadow:0 12px 30px rgba(12,18,24,.035);transition:.22s ease
+    }
+    .about .principles > div:before{
+      position:absolute;left:20px;top:16px;color:#f26a21;font:800 10px/1 Arial,sans-serif;letter-spacing:.16em
+    }
+    .about .principles > div:nth-child(1):before{content:"01"}
+    .about .principles > div:nth-child(2):before{content:"02"}
+    .about .principles > div:nth-child(3):before{content:"03"}
+    .about .principles > div:hover{transform:translateY(-3px);border-color:rgba(242,106,33,.55);box-shadow:0 16px 36px rgba(12,18,24,.07)}
+    .about .principles strong{display:block;margin-bottom:9px;font-size:13px}
+    .about .principles span{display:block;line-height:1.45}
+
+    /* The identifying values stay; the redundant labels requested for removal are hidden/removed in markup. */
+    .console-id-card strong{letter-spacing:.06em}
+
+    @media(max-width:900px){
+      .hero-auto-transition{height:58px}
+      .mission-separator{margin-top:34px;padding:58px 22px}
+      .mission-separator-inner{grid-template-columns:1fr;gap:34px}
+      .mission-flag{justify-self:center;min-width:0;border-left:0;padding-left:0;text-align:center}
+      .about.section{padding-top:76px!important;padding-bottom:82px!important}
+      .about .about-grid{gap:46px!important}
+      .about .principles{grid-template-columns:1fr!important}
+      .about.section:after{right:-330px;opacity:.55}
+    }
+    @media(max-width:700px){
+      .hero-auto-transition{height:46px}
+      .hero-auto-transition:after{bottom:12px}
+      .mission-separator{margin-top:26px;padding:46px 16px}
+      .motion-section{margin-top:58px!important}
+      .about.section{padding-top:62px!important;padding-bottom:68px!important}
+      .about-brand-line{grid-template-columns:30px 1fr;gap:12px;letter-spacing:.2em}
+      .about-brand-line i{width:30px}
+    }
+
   </style>
 </head>
 <body>
@@ -107,6 +220,8 @@
       <div class="brand-statement-rule"></div>
     </section>
 
+    <div class="hero-auto-transition" aria-hidden="true"></div>
+
     <section id="automotive" class="approved-mockup-section automotive-approved">
       <img src="automotive-final.png" alt="MR.WHEELS Automotive Services" />
     </section>
@@ -125,7 +240,6 @@
           <div class="mission-icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><path d="M24 5v6m0 26v6M5 24h6m26 0h6M11 11l5 5m16 16 5 5M37 11l-5 5M16 32l-5 5"/></svg><span>Support</span></div>
           <div class="mission-icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M6 24h36M24 6c6 6 9 12 9 18s-3 12-9 18c-6-6-9-12-9-18s3-12 9-18z"/></svg><span>Global</span></div>
         </div>
-        <div class="mission-tagline">More than parts.<br>A stronger tomorrow.<i></i></div>
         <div class="mission-flag"><div class="flag-lines"></div>Federal Supply<br>Global Partners<br>Mission Ready</div>
       </div>
     </section>
@@ -321,6 +435,7 @@
             Across both sides of the business, our approach is the same: understand the requirement,
             communicate clearly, solve problems quickly, and follow through.
           </p>
+          <div class="about-brand-line"><i></i><span>MORE THAN PARTS.<br><strong>A STRONGER TOMORROW.</strong></span></div>
           <div class="principles">
             <div><strong>Precision</strong><span>Details matter.</span></div>
             <div><strong>Responsiveness</strong><span>Time matters.</span></div>
@@ -384,7 +499,7 @@
             <small>SUPPLY SUPPORT</small>
           </div>
 
-          <div class="console-id-card" aria-label="MR. WHEELS LLC CAGE code 24AQ8">
+          <div class="console-id-card" aria-label="CAGE code 24AQ8">
             <div class="cage-reticle" aria-hidden="true">
               <svg viewBox="0 0 96 96" fill="none">
                 <rect x="25" y="18" width="46" height="60" rx="5"/>
@@ -395,10 +510,9 @@
             </div>
             <p>CAGE CODE</p>
             <strong>24AQ8</strong>
-            <small>MR. WHEELS LLC</small>
           </div>
 
-          <div class="console-id-card" aria-label="MR. WHEELS LLC Unique Entity ID QJ8LNNFVM586">
+          <div class="console-id-card" aria-label="Unique Entity ID QJ8LNNFVM586">
             <div class="cage-reticle" aria-hidden="true">
               <svg viewBox="0 0 96 96" fill="none">
                 <rect x="17" y="24" width="62" height="48" rx="5"/>
@@ -408,7 +522,6 @@
             </div>
             <p>UNIQUE ENTITY ID</p>
             <strong class="uei-value">QJ8LNNFVM586</strong>
-            <small>FEDERAL ENTITY IDENTIFIER</small>
           </div>
 
           <div class="console-id-card console-capability">
