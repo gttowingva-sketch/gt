@@ -69,8 +69,8 @@
         }
       ],
       "mantech": {
-        "width": 86,
-        "height": 85,
+        "width": 800,
+        "height": 450,
         "fit": "contain"
       },
       "soldier": {
@@ -163,8 +163,8 @@
         }
       ],
       "mantech": {
-        "width": 86,
-        "height": 85,
+        "width": 800,
+        "height": 450,
         "fit": "contain"
       },
       "soldier": {
@@ -256,8 +256,8 @@
         }
       ],
       "mantech": {
-        "width": 86,
-        "height": 85,
+        "width": 800,
+        "height": 450,
         "fit": "contain"
       },
       "soldier": {
@@ -349,8 +349,8 @@
         }
       ],
       "mantech": {
-        "width": 86,
-        "height": 85,
+        "width": 800,
+        "height": 450,
         "fit": "contain"
       },
       "soldier": {

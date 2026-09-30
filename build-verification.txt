@@ -8,5 +8,5 @@ ASSET_CACHED lockheed-martin.svg 3708
 ASSET_CACHED boeing.svg 2402
 ASSET_CACHED rolls-royce.svg 10049
 ASSET_CACHED general-dynamics.svg 3483
-ASSET_CACHED mantech-full.jpg 16734
+ASSET_CACHED mantech-full.jpg 71782
 BUILD_OK 132254 bytes; 10 logos; localTest=false.
