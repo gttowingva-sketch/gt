@@ -1,0 +1,57 @@
+name: Finish requested HTML refinements
+on:
+  push:
+    branches: [refined-v8-preview-20260930]
+    paths: [.github/workflows/finish-refined-v8.yml]
+permissions:
+  contents: write
+jobs:
+  finish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: refined-v8-preview-20260930
+      - name: Verify isolated branch
+        run: test "$(git branch --show-current)" = refined-v8-preview-20260930
+      - name: Prepare asset tools
+        run: python -m pip install --quiet pillow cairosvg numpy opencv-contrib-python-headless
+      - name: Prepare requested image and logo assets
+        shell: bash
+        run: |
+          set -eo pipefail
+          python prepare-refinement-assets.py 2>&1 | tee v8-assets-verification.txt
+      - name: Build actual V7 page plus targeted refinements
+        shell: bash
+        run: |
+          set -eo pipefail
+          node refinement-build.mjs 2>&1 | tee v8-build-verification.txt
+      - name: Install browser
+        run: |
+          npm install --no-save --package-lock=false playwright
+          npx playwright install --with-deps chromium
+      - name: Test unchanged sections, all images, layout and interactions
+        shell: bash
+        run: |
+          set -eo pipefail
+          node verify-refinements.mjs 2>&1 | tee v8-browser-verification.txt
+      - name: Enable verified preview build
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          checks=json.loads(pathlib.Path('v8-checks/qa.json').read_text())
+          assert checks['passed'] is True
+          p=pathlib.Path('vercel.json');v=json.loads(p.read_text());v['buildCommand']='node refinement-build.mjs';v['outputDirectory']='dist';p.write_text(json.dumps(v,indent=2)+'\n')
+          PY
+      - name: Save output only to the isolated preview branch
+        if: always()
+        run: |
+          test "$(git branch --show-current)" = refined-v8-preview-20260930
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for f in revision-assets vercel.json v8-assets-verification.txt v8-build-verification.txt v8-browser-verification.txt v8-checks; do if [ -e "$f" ]; then git add "$f"; fi; done
+          if ! git diff --cached --quiet; then
+            git commit -m 'Apply requested image, media, icon and logo refinements to HTML preview; preserve other V7 sections'
+            git push origin HEAD:refined-v8-preview-20260930
+          fi
