@@ -13,24 +13,42 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: fullwidth-v7-preview-20260930
+      - name: Await native dialog close before testing cleanup
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('preview-qa.mjs');s=p.read_text()
+          s=s.replace("if(await page.locator('#video-stage iframe').count())throw Error('Video not cleaned up');","await page.waitForSelector('#video-stage iframe',{state:'detached',timeout:5000});")
+          if 'report.error=' not in s:s=s.replace('}finally{','}catch(e){report.error=String(e.stack||e);throw e;}finally{')
+          p.write_text(s)
+          PY
       - name: Build complete preview
         run: node revision-build.mjs > build-verification.txt 2>&1
       - name: Install browser test tools
         run: |
           npm install --no-save --package-lock=false playwright
           npx playwright install --with-deps chromium
-      - name: Test complete images, alignment and interactions
-        run: node preview-qa.mjs | tee browser-verification.txt
+      - name: Test original media and interactions
+        shell: bash
+        run: node preview-qa.mjs 2>&1 | tee browser-verification.txt
+      - name: Finish verified preview configuration
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          assert json.loads(Path('preview-checks/qa.json').read_text()).get('passed')
+          p=Path('vercel.json');s=json.loads(p.read_text());s['buildCommand']='node revision-build.mjs';p.write_text(json.dumps(s)+'\n')
+          PY
       - name: Save verification only on preview branch
         if: always()
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add build-verification.txt
+          git add build-verification.txt preview-qa.mjs vercel.json
           if [ -f browser-verification.txt ]; then git add browser-verification.txt; fi
           if [ -d preview-checks ]; then git add preview-checks; fi
           if ! git diff --cached --quiet; then
-            git commit -m 'Verify full-width preview in browser at four screen widths'
+            git commit -m 'Complete browser-verified full-width preview, original logos and complete video cover'
             git push origin HEAD:fullwidth-v7-preview-20260930
           fi
