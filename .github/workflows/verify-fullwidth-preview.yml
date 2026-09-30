@@ -1,0 +1,40 @@
+name: Verify full-width preview
+on:
+  push:
+    branches: [fullwidth-v7-preview-20260930]
+    paths: [.github/workflows/verify-fullwidth-preview.yml]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fullwidth-v7-preview-20260930
+      - name: Build and capture source verification
+        shell: bash
+        run: |
+          set +e
+          node revision-build.mjs > build-verification.txt 2>&1
+          code=$?
+          printf '\nEXIT_CODE=%s\n' "$code" >> build-verification.txt
+          cat build-verification.txt
+          if [ "$code" -eq 0 ]; then
+            mkdir -p revision-assets
+            cp dist/assets/*.svg revision-assets/
+            cp dist/assets/mantech-full.jpg revision-assets/
+            cp dist/asset-sources.json revision-assets/
+          fi
+      - name: Save verification on preview branch only
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add build-verification.txt
+          if [ -d revision-assets ]; then git add revision-assets; fi
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record preview asset verification (no production changes)'
+            git push origin HEAD:fullwidth-v7-preview-20260930
+          fi
