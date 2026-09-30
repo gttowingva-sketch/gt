@@ -1,0 +1,72 @@
+{
+  "build": "fullwidth-v7-20260930",
+  "purpose": "Design preview; trademark permissions must be reviewed before public launch.",
+  "assets": [
+    {
+      "name": "caterpillar.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Caterpillar_logo.svg",
+      "bytes": 4184,
+      "sha256": "f08961cb2df47b03d971e5a7a87eac627d9a0798227ddbf5ac909041ed11b735"
+    },
+    {
+      "name": "bosch.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/1/16/Bosch-logo.svg",
+      "bytes": 2300,
+      "sha256": "e0d81afe3e28060dd505cfebfbea6a2f25e32f3fe8a45d2ee6d2cc025d175d8e"
+    },
+    {
+      "name": "zf.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/94/ZF_logo_STD_Blue_3CC.svg",
+      "bytes": 1089,
+      "sha256": "30e88ad5784adec5bb596ac4ff01f0d665e556fb36a794fa59cdb809fcde58ae"
+    },
+    {
+      "name": "timken.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Timken.svg",
+      "bytes": 4405,
+      "sha256": "64b1429f637b99c5a32e55996f40e7c20b93609b86ec225a4d844b5a5a50a99f"
+    },
+    {
+      "name": "denso.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Denso_logo.svg",
+      "bytes": 3264,
+      "sha256": "de8eec7d3abaaf6b1beb26dda8268db6b3dfd9e23c7748db84835c00f0a44fa5"
+    },
+    {
+      "name": "cummins.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Cummins_logo.svg",
+      "bytes": 3213,
+      "sha256": "ca09429f77496d0d39d872930d80344d19e0fea07be44d3bcb8a8e22178b8699"
+    },
+    {
+      "name": "lockheed-martin.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/44/Lockheed_Martin_logo_(2011%E2%80%932022).svg",
+      "bytes": 3708,
+      "sha256": "daf06d350e1187db275aac243b5cace81c74267d8780c2a7d6e81769c04be038"
+    },
+    {
+      "name": "boeing.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Boeing_full_logo.svg",
+      "bytes": 2402,
+      "sha256": "6942323654a190407f870f7b0bdec028bdf4518ad033d539fd6397b941fddf26"
+    },
+    {
+      "name": "rolls-royce.svg",
+      "source": "https://www.rolls-royce.com/~/media/Images/R/Rolls-Royce/logo/rebrand-svg-logo.svg",
+      "bytes": 10049,
+      "sha256": "dd52e4bf847aa777dfcdca5f9d0e7ef4a782628f2f9da0f0073b374b4378dbda"
+    },
+    {
+      "name": "general-dynamics.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d0/General_Dynamics_logo.svg",
+      "bytes": 3483,
+      "sha256": "75ab0c235cb363ab27ef6639b1d7a40d5e5726102c1436a52a15bb870a9789e1"
+    },
+    {
+      "name": "mantech-full.jpg",
+      "source": "https://pit.army.mil/wp-content/uploads/2025/09/dod-mantech-logo.png",
+      "bytes": 16734,
+      "sha256": "d6e1508f3f8419140bd4c21856efd1358052d04a2bcdb6b3a83535deb50726bd"
+    }
+  ]
+}

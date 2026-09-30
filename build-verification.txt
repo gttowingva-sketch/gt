@@ -8,15 +8,7 @@ ASSET_OK lockheed-martin.svg 3708 https://upload.wikimedia.org/wikipedia/commons
 ASSET_OK boeing.svg 2402 https://upload.wikimedia.org/wikipedia/commons/4/4f/Boeing_full_logo.svg
 ASSET_OK rolls-royce.svg 10049 https://www.rolls-royce.com/~/media/Images/R/Rolls-Royce/logo/rebrand-svg-logo.svg
 ASSET_OK general-dynamics.svg 3483 https://upload.wikimedia.org/wikipedia/commons/d/d0/General_Dynamics_logo.svg
-file:///home/runner/work/gt/gt/revision-build.mjs:27
- throw Error(`Required asset ${name} could not be retrieved: ${last}`);
-       ^
+ASSET_OK mantech-full.jpg 16734 https://pit.army.mil/wp-content/uploads/2025/09/dod-mantech-logo.png
+BUILD_OK 132254 bytes; 10 logos; localTest=false.
 
-Error: Required asset mantech-full.jpg could not be retrieved: Error: HTTP 403: https://media.defense.gov/2021/Jul/29/2003678653/-1/-1/0/210729-O-MF577-1256.JPG
-    at asset (file:///home/runner/work/gt/gt/revision-build.mjs:27:8)
-    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
-    at async file:///home/runner/work/gt/gt/revision-build.mjs:47:1
-
-Node.js v22.23.3
-
-EXIT_CODE=1
+EXIT_CODE=0

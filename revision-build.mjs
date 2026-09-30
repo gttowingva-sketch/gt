@@ -14,6 +14,7 @@ async function remote(url){
 }
 async function asset(name,urls,svg=false){
  if(offline){manifest.push({name,source:urls[0],localTest:true});return;}
+ try{const cached=await fs.readFile(`revision-assets/${name}`);if(cached.length>100){await fs.writeFile(`${output}/assets/${name}`,cached);manifest.push({name,source:'verified repository cache',bytes:cached.length});console.log(`ASSET_CACHED ${name} ${cached.length}`);return;}}catch(_){}
  let last;
  for(const url of urls){
   try{
@@ -44,7 +45,7 @@ for(const [id,name,file] of brands){
  if(id==='rolls-royce')urls.unshift('https://www.rolls-royce.com/~/media/Images/R/Rolls-Royce/logo/rebrand-svg-logo.svg');
  await asset(`${id}.svg`,urls,true);
 }
-await asset('mantech-full.jpg',['https://media.defense.gov/2023/Jun/20/2003244421/-1/-1/0/230620-D-TJ319-001.JPG','https://media.defense.gov/2021/Jul/29/2003678653/-1/-1/0/210729-O-MF577-1256.JPG']);
+await asset('mantech-full.jpg',['https://pit.army.mil/wp-content/uploads/2025/09/dod-mantech-logo.png','https://media.defense.gov/2023/Jun/20/2003244421/-1/-1/0/230620-D-TJ319-001.JPG','https://media.defense.gov/2021/Jul/29/2003678653/-1/-1/0/210729-O-MF577-1256.JPG']);
 const soldier=await fs.readFile('about-soldier.avif');
 if(createHash('sha256').update(soldier).digest('hex')!=='f5ae487000d370c058fd536ff8b90c3fba3c5a0a44e505e497b40289c27b984b')throw Error('Soldier image checksum mismatch; refusing corrupt asset.');
 await fs.writeFile(`${output}/assets/about-soldier.avif`,soldier);
