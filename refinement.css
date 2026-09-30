@@ -1,0 +1,66 @@
+/* V8: additive refinements of the approved V7 HTML. */
+body.mrw-v8 .cinematic{isolation:isolate}
+body.mrw-v8 .mission{min-height:clamp(320px,23vw,440px);display:flex;align-items:center;padding-block:65px}
+body.mrw-v8 .mission .container{position:relative;z-index:3}
+body.mrw-v8 .mission-art{inset:0!important;width:100%!important;overflow:hidden;mask-image:none!important;-webkit-mask-image:none!important}
+body.mrw-v8 .mission-art img{position:absolute;right:0;top:50%;width:82%!important;height:auto!important;max-width:none!important;object-fit:contain!important;transform:translateY(-50%)!important;mask-image:linear-gradient(90deg,transparent,#000 30%)!important;-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%)!important}
+body.mrw-v8 .mission .cinematic-shade{background:linear-gradient(90deg,#080c0f 0%,#080c0ff2 27%,#080c0f96 41%,#080c0f28 57%,transparent 72%),linear-gradient(0deg,#080c0f40,transparent 35%)!important}
+body.mrw-v8 .mission h2{font-size:clamp(27px,2.7vw,47px);max-width:1100px;line-height:1.13}
+body.mrw-v8 .government-intro{min-height:clamp(450px,31vw,570px)!important;position:relative}
+body.mrw-v8 .government-art{width:100%!important;inset:0!important;z-index:-3}
+body.mrw-v8 .government-backdrop{position:absolute;inset:0;background-position:center;background-size:cover;filter:blur(12px) brightness(.48);opacity:.6;transform:scale(1.04);z-index:-4}
+body.mrw-v8 .government-art img{position:absolute;right:-1px;top:50%!important;width:55%!important;height:auto!important;max-width:none!important;object-fit:contain!important;object-position:right center!important;transform:translateY(-50%)!important;mask-image:linear-gradient(90deg,transparent,#000 15%)!important;-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%)!important}
+body.mrw-v8 .government-intro .cinematic-shade{background:linear-gradient(90deg,#080c0fec 0%,#080c0fdc 20%,#080c0f8c 37%,#080c0f35 52%,transparent 71%),linear-gradient(0deg,#080c0f,transparent 18%,transparent 91%,#080c0f22)!important}
+/* Equal 16:9 source canvases and separate action rows. */
+body.mrw-v8 .motion-media{aspect-ratio:auto!important;height:auto!important;display:grid!important;grid-template-rows:auto 54px;background:#10171b!important;overflow:hidden}
+body.mrw-v8 .motion-stage{position:relative;display:flex;width:100%;aspect-ratio:16/9;align-items:center;justify-content:center;background:#10171b;overflow:hidden}
+body.mrw-v8 .motion-stage .media-ambience{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;filter:blur(14px) brightness(.45) saturate(.7)!important;transform:scale(1.12)!important;opacity:.8!important;padding:0!important}
+body.mrw-v8 .motion-stage img:not(.media-ambience){position:relative!important;inset:auto!important;width:100%!important;height:100%!important;max-height:100%;object-fit:contain!important;object-position:center!important;transform:none!important;filter:none!important;padding:0!important;z-index:1}
+body.mrw-v8 .motion-media[data-video='870918'] .motion-stage{background:#eee!important}
+body.mrw-v8 .motion-media[data-video='870918'] .media-ambience{display:none}
+body.mrw-v8 .motion-media .media-action{position:relative!important;inset:auto!important;height:54px;display:flex;align-items:center;background:#0a1015!important}
+body.mrw-v8 .motion-media .motion-number{z-index:3}
+/* Official logo artwork optically normalized rather than stretched. */
+body.mrw-v8 .network-content{grid-template-columns:minmax(250px,.85fr) minmax(0,2.5fr) auto;gap:28px}
+body.mrw-v8 .network-logos{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px 20px}
+body.mrw-v8 .network-logo{height:56px;min-width:0}
+body.mrw-v8 .network-logo img{width:100%!important;max-width:165px!important;min-width:0!important;height:56px!important;max-height:56px!important;object-fit:contain!important;filter:none!important;opacity:.93}
+body.mrw-v8 .network-world{opacity:.58;inset:-35px 14% -45px 26%;width:63%;height:145%}
+body.mrw-v8 .mission-separator{padding:30px 0!important}
+body.mrw-v8 .mission-separator-inner{display:grid;grid-template-columns:minmax(0,1fr) 170px;align-items:center;gap:26px}
+body.mrw-v8 .mission-icons{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));width:100%}
+body.mrw-v8 .mission-icon{display:flex!important;flex-direction:row!important;justify-content:center!important;align-items:center!important;gap:14px!important;min-height:72px!important;padding:5px 12px!important;color:#bfc5c9;border-right:1px solid #d4dde51f}
+body.mrw-v8 .mission-icon .focus-symbol{width:52px!important;height:47px!important;max-width:none;flex:0 0 52px;fill:currentColor;stroke:none}
+body.mrw-v8 .mission-icon .focus-label{display:block!important;font-size:12px!important;letter-spacing:.03em!important;text-align:left!important;line-height:1.25!important;font-weight:800;color:#eef0f2}
+body.mrw-v8 .focus-label small{display:block;color:#929ba2;font-size:8px;letter-spacing:.02em;font-weight:400;margin-top:7px;white-space:nowrap}
+body.mrw-v8 .mission-flag{padding-left:24px;border-left:1px solid #d4dde51f}
+body.mrw-v8 .mission-flag>span{font-size:8px;letter-spacing:.13em;line-height:1.7}
+/* Sunset soldier moves to Working Process; all five steps remain. */
+body.mrw-v8 .process-section{position:relative;isolation:isolate;overflow:hidden;padding-top:85px;padding-bottom:75px;background:#080c0f;min-height:530px}
+body.mrw-v8 .process-art{position:absolute;inset:0 0 0 auto;width:70%;z-index:-3;pointer-events:none}
+body.mrw-v8 .process-art img{width:100%;height:100%;object-fit:cover;object-position:58% center;mask-image:linear-gradient(90deg,transparent,#000 37%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 37%)}
+body.mrw-v8 .process-shade{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#080c0f 0%,#080c0fec 29%,#080c0f74 49%,transparent 72%),linear-gradient(0deg,#080c0f 0%,#080c0fed 25%,#080c0f52 50%,transparent 90%)}
+body.mrw-v8 .process-heading{max-width:62%;margin-bottom:100px}
+body.mrw-v8 .process-heading h2{max-width:1030px;font-size:clamp(30px,3vw,52px);line-height:1.14}
+body.mrw-v8 .process-grid{position:relative;z-index:2;gap:25px}
+body.mrw-v8 .process-step h3{font-size:14px;line-height:1.4}
+body.mrw-v8 .process-step p{color:#b1bac1}
+/* About uses warehouse scenery but preserves the approved About wording. */
+body.mrw-v8 .about{position:relative;isolation:isolate;overflow:hidden;min-height:750px;padding-block:75px;background:#080c0f!important}
+body.mrw-v8 .about:before,body.mrw-v8 .about:after{display:none!important}
+body.mrw-v8 .about-backdrop{position:absolute;inset:0 0 0 auto;width:78%;z-index:-3;pointer-events:none}
+body.mrw-v8 .about-backdrop img{width:100%;height:100%;object-fit:cover;object-position:center;mask-image:linear-gradient(90deg,transparent,#000 36%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 36%)}
+body.mrw-v8 .about-shade{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#080c0ffa 0%,#080c0ff0 23%,#080c0fd4 37%,#080c0f97 49%,#080c0f28 69%,transparent 88%),linear-gradient(0deg,#080c0f,transparent 23%,transparent 84%,#080c0f77)}
+body.mrw-v8 .about-grid{display:block;max-width:810px;width:52%}
+body.mrw-v8 #about-title{font-size:clamp(35px,3.5vw,61px);line-height:1.08;max-width:800px}
+body.mrw-v8 .about-copy{margin-top:28px;max-width:760px}
+body.mrw-v8 .about-copy .lead{font-size:clamp(16px,1.18vw,20px);line-height:1.6}
+body.mrw-v8 .about-copy>p:not(.lead){font-size:14px;line-height:1.8;color:#b7c0c6}
+body.mrw-v8 .about-brand-line{padding-block:18px;margin-block:26px 22px}
+body.mrw-v8 .principles{gap:12px}
+body.mrw-v8 .principles>div{background:#0a1118bb!important;backdrop-filter:blur(4px);padding:18px;min-height:118px}
+@media(min-width:2200px){body.mrw-v8 .about-grid{max-width:1000px}body.mrw-v8 .about{min-height:880px}body.mrw-v8 .process-heading{margin-bottom:130px}body.mrw-v8 .process-section{min-height:620px}}
+@media(max-width:1300px){body.mrw-v8 .mission-separator-inner{grid-template-columns:minmax(0,1fr) 145px;gap:15px}body.mrw-v8 .mission-icon{gap:8px!important;padding-inline:8px!important}body.mrw-v8 .mission-icon .focus-symbol{width:39px!important;height:39px!important;flex-basis:39px}body.mrw-v8 .mission-icon .focus-label{font-size:10px!important}body.mrw-v8 .focus-label small{font-size:6.7px}body.mrw-v8 .network-content{grid-template-columns:240px 1fr;gap:22px}body.mrw-v8 .network-logos{grid-column:2;grid-row:1/3}body.mrw-v8 .network-cta{grid-column:1;grid-row:2;justify-self:start}body.mrw-v8 .network-logo img{height:49px!important;max-height:49px!important}body.mrw-v8 .process-heading{max-width:70%}body.mrw-v8 .about-grid{width:58%}}
+@media(max-width:1000px){body.mrw-v8 .mission-icons{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:20px}body.mrw-v8 .mission-icon .focus-symbol{width:47px!important;height:43px!important;flex-basis:47px}body.mrw-v8 .mission-icon .focus-label{font-size:11px!important}body.mrw-v8 .focus-label small{font-size:7.3px}body.mrw-v8 .mission-icon:nth-child(3n){border-right:0}body.mrw-v8 .process-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:35px}body.mrw-v8 .process-heading{margin-bottom:65px}body.mrw-v8 .about-grid{width:67%;max-width:none}body.mrw-v8 .about-backdrop{width:100%;opacity:.75}}
+@media(max-width:760px){body.mrw-v8 .mission{padding-block:48px;min-height:335px}body.mrw-v8 .mission-art img{width:auto!important;height:100%!important;max-width:none!important;right:-24%;opacity:.65}body.mrw-v8 .mission .cinematic-shade{background:linear-gradient(90deg,#080c0fea,#080c0f91 64%,#080c0f44)!important}body.mrw-v8 .mission h2{font-size:29px;max-width:560px}body.mrw-v8 .government-intro{min-height:565px!important}body.mrw-v8 .government-art img{top:auto!important;bottom:0;right:-18%;height:auto!important;width:125%!important;transform:none!important;opacity:.65}body.mrw-v8 .government-intro .cinematic-shade{background:linear-gradient(180deg,#080c0ff5,#080c0fcc 30%,#080c0f55 70%,#080c0f),linear-gradient(90deg,#080c0fa9,transparent)!important}body.mrw-v8 .process-section{padding-top:62px;padding-bottom:62px;min-height:720px}body.mrw-v8 .process-art{width:100%;height:370px;top:0;opacity:.8}body.mrw-v8 .process-heading{max-width:100%;margin-bottom:90px}body.mrw-v8 .process-heading h2{max-width:560px}body.mrw-v8 .process-shade{background:linear-gradient(0deg,#080c0f,#080c0f 41%,#080c0f60 70%,#080c0f5c),linear-gradient(90deg,#080c0fc9,transparent)}body.mrw-v8 .process-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}body.mrw-v8 .about{min-height:940px;padding-top:58px;padding-bottom:260px}body.mrw-v8 .about-grid{width:100%;max-width:none}body.mrw-v8 .about-backdrop{inset:auto 0 0;width:100%;height:600px;opacity:.8}body.mrw-v8 .about-backdrop img{object-position:right bottom;mask-image:none;-webkit-mask-image:none}body.mrw-v8 .about-shade{background:linear-gradient(180deg,#080c0f,#080c0f 42%,#080c0fcc 62%,#080c0f44 88%,#080c0f)}body.mrw-v8 .network-content{grid-template-columns:1fr}body.mrw-v8 .network-logos{grid-column:1;grid-row:auto;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}body.mrw-v8 .network-cta{grid-row:auto;grid-column:1}body.mrw-v8 .network-world{inset:70px -10% 0;width:120%;height:85%}body.mrw-v8 .mission-separator-inner{grid-template-columns:1fr}body.mrw-v8 .mission-flag{display:flex;gap:18px;align-items:center;justify-content:center;border-left:0;border-top:1px solid #ffffff16;padding:18px 0 0;margin-top:10px}body.mrw-v8 .mission-flag .us-flag{margin:0;width:62px}}
+@media(max-width:480px){body.mrw-v8 .mission-icons{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 0}body.mrw-v8 .mission-icon:nth-child(3n){border-right:1px solid #ffffff16}body.mrw-v8 .mission-icon:nth-child(2n){border-right:0}body.mrw-v8 .network-logos{grid-template-columns:repeat(2,minmax(0,1fr))}body.mrw-v8 .network-logo:last-child{grid-column:auto}body.mrw-v8 .network-logo img{max-width:145px!important;height:54px!important}body.mrw-v8 .principles{grid-template-columns:1fr!important}body.mrw-v8 .principles>div{min-height:100px}body.mrw-v8 .about{min-height:1150px}body.mrw-v8 .process-step h3{font-size:12px}body.mrw-v8 .process-step p{font-size:11px}}
