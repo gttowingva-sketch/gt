@@ -13,41 +13,24 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: fullwidth-v7-preview-20260930
-      - name: Prepare resilient local assets and blend source boundaries
-        shell: bash
+      - name: Build complete preview
+        run: node revision-build.mjs > build-verification.txt 2>&1
+      - name: Install browser test tools
         run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          p=Path('revision-build.mjs');s=p.read_text()
-          s=s.replace("await asset('mantech-full.jpg',[", "await asset('mantech-full.jpg',['https://pit.army.mil/wp-content/uploads/2025/09/dod-mantech-logo.png',")
-          marker=' let last;\n'
-          cache=" try{const cached=await fs.readFile(`revision-assets/${name}`);if(cached.length>100){await fs.writeFile(`${output}/assets/${name}`,cached);manifest.push({name,source:'verified repository cache',bytes:cached.length});console.log(`ASSET_CACHED ${name} ${cached.length}`);return;}}catch(_){}\n"
-          if "ASSET_CACHED" not in s:s=s.replace(marker,cache+marker)
-          p.write_text(s)
-          css=Path('revision.css');s=css.read_text()
-          if 'SOURCE-EDGE BLEND' not in s:s+='\n/* SOURCE-EDGE BLEND: mask the actual artwork, not an empty full-width box. */\n@media(min-width:761px){body.mrw-v7 .government-art img{position:absolute;right:0;top:0;width:auto!important;height:100%!important;max-width:none!important;-webkit-mask-image:linear-gradient(90deg,transparent,#000 38%);mask-image:linear-gradient(90deg,transparent,#000 38%)}body.mrw-v7 .auto-art img{-webkit-mask-image:linear-gradient(90deg,transparent,#000 38%);mask-image:linear-gradient(90deg,transparent,#000 38%)}}\n'
-          css.write_text(s)
-          PY
-      - name: Build and capture source verification
-        shell: bash
-        run: |
-          set +e
-          node revision-build.mjs > build-verification.txt 2>&1
-          code=$?
-          printf '\nEXIT_CODE=%s\n' "$code" >> build-verification.txt
-          cat build-verification.txt
-          mkdir -p revision-assets
-          cp dist/assets/*.svg revision-assets/ 2>/dev/null || true
-          if [ -f dist/assets/mantech-full.jpg ]; then cp dist/assets/mantech-full.jpg revision-assets/; fi
-          if [ -f dist/asset-sources.json ]; then cp dist/asset-sources.json revision-assets/; fi
-          echo "$code" > revision-assets/verification-exit-code.txt
-      - name: Save verified assets on preview branch only
+          npm install --no-save --package-lock=false playwright
+          npx playwright install --with-deps chromium
+      - name: Test complete images, alignment and interactions
+        run: node preview-qa.mjs | tee browser-verification.txt
+      - name: Save verification only on preview branch
+        if: always()
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add build-verification.txt revision-assets revision-build.mjs revision.css
+          git add build-verification.txt
+          if [ -f browser-verification.txt ]; then git add browser-verification.txt; fi
+          if [ -d preview-checks ]; then git add preview-checks; fi
           if ! git diff --cached --quiet; then
-            git commit -m 'Cache original logo artwork and validate complete preview assets'
+            git commit -m 'Verify full-width preview in browser at four screen widths'
             git push origin HEAD:fullwidth-v7-preview-20260930
           fi
