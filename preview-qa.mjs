@@ -22,7 +22,7 @@ try{
   await page.waitForSelector('#video-dialog[open]');
   state.videoFrame=await page.locator('#video-stage iframe').getAttribute('src');
   await page.locator('#video-dialog [data-close-dialog]').click();
-  if(await page.locator('#video-stage iframe').count())throw Error('Video not cleaned up');
+  await page.waitForSelector('#video-stage iframe',{state:'detached',timeout:5000});
   if(width===390){await page.locator('.nav-toggle').click();state.mobileMenu=await page.locator('.nav-toggle').getAttribute('aria-expanded');await page.locator('.nav-toggle').click();}
   state.errors=errors;report.widths.push(state);
   if(width===1440){
@@ -32,7 +32,7 @@ try{
   await page.close();
  }
  report.passed=true;
-}finally{
+}catch(e){report.error=String(e.stack||e);throw e;}finally{
  await fs.writeFile('preview-checks/qa.json',JSON.stringify(report,null,2));
  await browser.close();server.close();
 }

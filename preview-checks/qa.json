@@ -1,5 +1,380 @@
 {
   "build": "fullwidth-v7-20260930",
-  "widths": [],
-  "liveSiteModified": false
+  "widths": [
+    {
+      "viewport": 390,
+      "documentWidth": 390,
+      "broken": [],
+      "logos": 10,
+      "sections": [
+        {
+          "name": "hero cinematic",
+          "left": 0,
+          "right": 390
+        },
+        {
+          "name": "automotive",
+          "left": 0,
+          "right": 390
+        },
+        {
+          "name": "government",
+          "left": 0,
+          "right": 390
+        },
+        {
+          "name": "suppliers",
+          "left": 0,
+          "right": 390
+        },
+        {
+          "name": "manufacturer-network",
+          "left": 0,
+          "right": 390
+        },
+        {
+          "name": "supply-categories",
+          "left": 0,
+          "right": 390
+        },
+        {
+          "name": "capabilities-motion",
+          "left": 0,
+          "right": 390
+        },
+        {
+          "name": "process-section section-pad",
+          "left": 0,
+          "right": 390
+        },
+        {
+          "name": "about",
+          "left": 0,
+          "right": 390
+        },
+        {
+          "name": "mission cinematic",
+          "left": 0,
+          "right": 390
+        },
+        {
+          "name": "mission-separator",
+          "left": 0,
+          "right": 390
+        },
+        {
+          "name": "contact",
+          "left": 0,
+          "right": 390
+        }
+      ],
+      "mantech": {
+        "width": 86,
+        "height": 85,
+        "fit": "contain"
+      },
+      "soldier": {
+        "width": 706,
+        "height": 299
+      },
+      "order": [
+        "hero cinematic",
+        "automotive",
+        "government",
+        "suppliers",
+        "manufacturer-network",
+        "supply-categories",
+        "capabilities-motion",
+        "process-section section-pad",
+        "about",
+        "mission cinematic",
+        "mission-separator",
+        "contact"
+      ],
+      "videoFrame": "https://www.dvidshub.net/video/embed/870918",
+      "mobileMenu": "true",
+      "errors": []
+    },
+    {
+      "viewport": 768,
+      "documentWidth": 768,
+      "broken": [],
+      "logos": 10,
+      "sections": [
+        {
+          "name": "hero cinematic",
+          "left": 0,
+          "right": 768
+        },
+        {
+          "name": "automotive",
+          "left": 0,
+          "right": 768
+        },
+        {
+          "name": "government",
+          "left": 0,
+          "right": 768
+        },
+        {
+          "name": "suppliers",
+          "left": 0,
+          "right": 768
+        },
+        {
+          "name": "manufacturer-network",
+          "left": 0,
+          "right": 768
+        },
+        {
+          "name": "supply-categories",
+          "left": 0,
+          "right": 768
+        },
+        {
+          "name": "capabilities-motion",
+          "left": 0,
+          "right": 768
+        },
+        {
+          "name": "process-section section-pad",
+          "left": 0,
+          "right": 768
+        },
+        {
+          "name": "about",
+          "left": 0,
+          "right": 768
+        },
+        {
+          "name": "mission cinematic",
+          "left": 0,
+          "right": 768
+        },
+        {
+          "name": "mission-separator",
+          "left": 0,
+          "right": 768
+        },
+        {
+          "name": "contact",
+          "left": 0,
+          "right": 768
+        }
+      ],
+      "mantech": {
+        "width": 86,
+        "height": 85,
+        "fit": "contain"
+      },
+      "soldier": {
+        "width": 706,
+        "height": 299
+      },
+      "order": [
+        "hero cinematic",
+        "automotive",
+        "government",
+        "suppliers",
+        "manufacturer-network",
+        "supply-categories",
+        "capabilities-motion",
+        "process-section section-pad",
+        "about",
+        "mission cinematic",
+        "mission-separator",
+        "contact"
+      ],
+      "videoFrame": "https://www.dvidshub.net/video/embed/870918",
+      "errors": []
+    },
+    {
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "broken": [],
+      "logos": 10,
+      "sections": [
+        {
+          "name": "hero cinematic",
+          "left": 0,
+          "right": 1440
+        },
+        {
+          "name": "automotive",
+          "left": 0,
+          "right": 1440
+        },
+        {
+          "name": "government",
+          "left": 0,
+          "right": 1440
+        },
+        {
+          "name": "suppliers",
+          "left": 0,
+          "right": 1440
+        },
+        {
+          "name": "manufacturer-network",
+          "left": 0,
+          "right": 1440
+        },
+        {
+          "name": "supply-categories",
+          "left": 0,
+          "right": 1440
+        },
+        {
+          "name": "capabilities-motion",
+          "left": 0,
+          "right": 1440
+        },
+        {
+          "name": "process-section section-pad",
+          "left": 0,
+          "right": 1440
+        },
+        {
+          "name": "about",
+          "left": 0,
+          "right": 1440
+        },
+        {
+          "name": "mission cinematic",
+          "left": 0,
+          "right": 1440
+        },
+        {
+          "name": "mission-separator",
+          "left": 0,
+          "right": 1440
+        },
+        {
+          "name": "contact",
+          "left": 0,
+          "right": 1440
+        }
+      ],
+      "mantech": {
+        "width": 86,
+        "height": 85,
+        "fit": "contain"
+      },
+      "soldier": {
+        "width": 706,
+        "height": 299
+      },
+      "order": [
+        "hero cinematic",
+        "automotive",
+        "government",
+        "suppliers",
+        "manufacturer-network",
+        "supply-categories",
+        "capabilities-motion",
+        "process-section section-pad",
+        "about",
+        "mission cinematic",
+        "mission-separator",
+        "contact"
+      ],
+      "videoFrame": "https://www.dvidshub.net/video/embed/870918",
+      "errors": []
+    },
+    {
+      "viewport": 1920,
+      "documentWidth": 1920,
+      "broken": [],
+      "logos": 10,
+      "sections": [
+        {
+          "name": "hero cinematic",
+          "left": 0,
+          "right": 1920
+        },
+        {
+          "name": "automotive",
+          "left": 0,
+          "right": 1920
+        },
+        {
+          "name": "government",
+          "left": 0,
+          "right": 1920
+        },
+        {
+          "name": "suppliers",
+          "left": 0,
+          "right": 1920
+        },
+        {
+          "name": "manufacturer-network",
+          "left": 0,
+          "right": 1920
+        },
+        {
+          "name": "supply-categories",
+          "left": 0,
+          "right": 1920
+        },
+        {
+          "name": "capabilities-motion",
+          "left": 0,
+          "right": 1920
+        },
+        {
+          "name": "process-section section-pad",
+          "left": 0,
+          "right": 1920
+        },
+        {
+          "name": "about",
+          "left": 0,
+          "right": 1920
+        },
+        {
+          "name": "mission cinematic",
+          "left": 0,
+          "right": 1920
+        },
+        {
+          "name": "mission-separator",
+          "left": 0,
+          "right": 1920
+        },
+        {
+          "name": "contact",
+          "left": 0,
+          "right": 1920
+        }
+      ],
+      "mantech": {
+        "width": 86,
+        "height": 85,
+        "fit": "contain"
+      },
+      "soldier": {
+        "width": 706,
+        "height": 299
+      },
+      "order": [
+        "hero cinematic",
+        "automotive",
+        "government",
+        "suppliers",
+        "manufacturer-network",
+        "supply-categories",
+        "capabilities-motion",
+        "process-section section-pad",
+        "about",
+        "mission cinematic",
+        "mission-separator",
+        "contact"
+      ],
+      "videoFrame": "https://www.dvidshub.net/video/embed/870918",
+      "errors": []
+    }
+  ],
+  "liveSiteModified": false,
+  "passed": true
 }
