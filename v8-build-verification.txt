@@ -1,0 +1,13 @@
+ASSET_CACHED caterpillar.svg 4184
+ASSET_CACHED bosch.svg 2300
+ASSET_CACHED zf.svg 1089
+ASSET_CACHED timken.svg 4405
+ASSET_CACHED denso.svg 3264
+ASSET_CACHED cummins.svg 3213
+ASSET_CACHED lockheed-martin.svg 3708
+ASSET_CACHED boeing.svg 2402
+ASSET_CACHED rolls-royce.svg 10049
+ASSET_CACHED general-dynamics.svg 3483
+ASSET_CACHED mantech-full.jpg 71782
+BUILD_OK 132254 bytes; 10 logos; localTest=false.
+V8_HTML_READY: targeted revisions only; original content and interactions retained.

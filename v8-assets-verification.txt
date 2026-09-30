@@ -1,0 +1,152 @@
+{
+  "baseline": "4c707c8b3f14890d20fffc29158ea362713de4c1",
+  "assets": [
+    {
+      "asset": "warehouse-scene.webp",
+      "source": "https://raw.githubusercontent.com/gttowingva-sketch/gt/fae7c63deec86f1cf56ed6da0f2f7a5b01f0922c/mr-wheels-exact-mockup.jpg",
+      "sourceDimensions": [
+        941,
+        1672
+      ],
+      "crop": [
+        0.51,
+        0.04,
+        1,
+        0.234
+      ],
+      "method": "crop existing photograph; UI excluded"
+    },
+    {
+      "asset": "soldier-sunset-clean.webp",
+      "source": "about-soldier.avif",
+      "sourceDimensions": [
+        706,
+        299
+      ],
+      "dimensions": [
+        2824,
+        1196
+      ],
+      "method": "FSRCNN x4 enhancement of original source",
+      "overlayTextRemoved": true
+    },
+    {
+      "asset": "caterpillar-optical.png",
+      "paintedDimensions": [
+        328,
+        54
+      ],
+      "canvas": [
+        400,
+        128
+      ]
+    },
+    {
+      "asset": "bosch-optical.png",
+      "paintedDimensions": [
+        278,
+        62
+      ],
+      "canvas": [
+        400,
+        128
+      ]
+    },
+    {
+      "asset": "zf-optical.png",
+      "paintedDimensions": [
+        86,
+        86
+      ],
+      "canvas": [
+        400,
+        128
+      ]
+    },
+    {
+      "asset": "timken-optical.png",
+      "paintedDimensions": [
+        280,
+        60
+      ],
+      "canvas": [
+        400,
+        128
+      ]
+    },
+    {
+      "asset": "denso-optical.png",
+      "paintedDimensions": [
+        323,
+        62
+      ],
+      "canvas": [
+        400,
+        128
+      ]
+    },
+    {
+      "asset": "cummins-optical.png",
+      "paintedDimensions": [
+        85,
+        86
+      ],
+      "canvas": [
+        400,
+        128
+      ]
+    },
+    {
+      "asset": "lockheed-martin-optical.png",
+      "paintedDimensions": [
+        298,
+        72
+      ],
+      "canvas": [
+        400,
+        128
+      ]
+    },
+    {
+      "asset": "boeing-optical.png",
+      "paintedDimensions": [
+        314,
+        72
+      ],
+      "canvas": [
+        400,
+        128
+      ]
+    },
+    {
+      "asset": "rolls-royce-optical.png",
+      "paintedDimensions": [
+        58,
+        94
+      ],
+      "canvas": [
+        400,
+        128
+      ]
+    },
+    {
+      "asset": "general-dynamics-optical.png",
+      "paintedDimensions": [
+        352,
+        17
+      ],
+      "canvas": [
+        400,
+        128
+      ]
+    },
+    {
+      "asset": "inspection-original.webp",
+      "source": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2407/931740/DOD_110464215.0000001/1000w_q95.jpg",
+      "dimensions": [
+        999,
+        527
+      ]
+    }
+  ]
+}

@@ -1,1 +1,17 @@
-{"version": 2, "framework": null, "buildCommand": "node revision-build.mjs", "outputDirectory": "dist", "headers": [{"source": "/(.*)", "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow"}]}]}
+{
+  "version": 2,
+  "framework": null,
+  "buildCommand": "node refinement-build.mjs",
+  "outputDirectory": "dist",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ]
+}
