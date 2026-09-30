@@ -1,0 +1,77 @@
+/* MR.WHEELS V7: one full-width system, complete source images. */
+body.mrw-v7{--gutter:clamp(20px,3.3vw,72px);--max:100%;overflow-x:clip}
+body.mrw-v7 main,body.mrw-v7 main>section,body.mrw-v7 footer{width:100%;max-width:none;margin-inline:0}
+body.mrw-v7 .container,body.mrw-v7 .automotive>.container,body.mrw-v7 .government>.container{box-sizing:border-box;width:100%!important;max-width:none!important;margin-inline:0!important;padding-inline:var(--gutter)!important}
+body.mrw-v7 .header-inner{max-width:none;width:100%;padding-inline:var(--gutter)}
+body.mrw-v7 .section-block>.cinematic{width:100%!important;max-width:none!important;margin-inline:0!important;border:0!important}
+body.mrw-v7 .section-intro-content{padding-inline:var(--gutter)!important}
+body.mrw-v7 .section-label{max-width:none!important}
+body.mrw-v7 .cinematic-art{border:0;box-shadow:none}
+body.mrw-v7 .hero{min-height:clamp(640px,46vw,850px);padding-top:145px;padding-bottom:112px}
+body.mrw-v7 .hero-art{inset:0!important;width:100%!important;transform:none!important;mask-image:none!important;-webkit-mask-image:none!important}
+body.mrw-v7 .hero-art img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:right center!important;transform:none!important;filter:brightness(.86) saturate(.8)!important}
+body.mrw-v7 .hero .cinematic-shade{background:linear-gradient(90deg,#050708 0%,#050708f5 23%,#05070899 43%,#05070808 65%),linear-gradient(0deg,#080c0f,transparent 22%,transparent 92%,#080c0f66)!important}
+body.mrw-v7 .hero h1{max-width:960px;font-size:clamp(43px,4.5vw,80px);line-height:1.03}
+body.mrw-v7 .hero-content>p{max-width:530px}
+body.mrw-v7 .hero-bottom{width:100%!important;padding-inline:var(--gutter)!important}
+body.mrw-v7 .service-intro{min-height:clamp(450px,32vw,560px);padding:36px 0 28px}
+body.mrw-v7 .auto-art{inset:0 0 0 auto!important;width:100%!important;mask-image:none!important;-webkit-mask-image:none!important}
+body.mrw-v7 .auto-art img{object-fit:contain!important;object-position:right center!important;transform:none!important;filter:brightness(.83)}
+body.mrw-v7 .service-intro .cinematic-shade{background:linear-gradient(90deg,#080c0f 0%,#080c0fe8 28%,#080c0f73 47%,transparent 68%),linear-gradient(0deg,#080c0f,transparent 19%)!important}
+body.mrw-v7 .government-intro{min-height:clamp(420px,29vw,510px)!important;padding:32px 0 28px!important}
+body.mrw-v7 .government-art{inset:0 0 0 auto!important;width:100%!important;mask-image:none!important;-webkit-mask-image:none!important}
+body.mrw-v7 .government-art img{width:100%;height:100%;object-fit:contain!important;object-position:right center!important;transform:none!important;filter:brightness(.92) saturate(.9)}
+body.mrw-v7 .government-intro .cinematic-shade{background:linear-gradient(90deg,#080c0f 0%,#080c0fed 29%,#080c0f66 47%,transparent 67%),linear-gradient(0deg,#080c0f,transparent 12%)!important}
+body.mrw-v7 .government-intro h2{font-size:clamp(36px,3.8vw,66px);max-width:940px}
+body.mrw-v7 .government-intro+.container{margin-top:0!important}
+body.mrw-v7 .government-trust{padding:17px 0!important;margin:0 0 18px!important}
+body.mrw-v7 .service-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:18px!important;width:100%!important;align-items:stretch}
+body.mrw-v7 .service-card{height:auto;min-width:0}
+body.mrw-v7 .service-media{aspect-ratio:1.95}
+body.mrw-v7 .service-copy{height:auto;flex:1;padding:24px}
+body.mrw-v7 .service-copy h3{font-size:clamp(16px,1.12vw,21px)}
+body.mrw-v7 .service-copy p{font-size:14px}
+body.mrw-v7 .service-copy .text-link{margin-top:auto}
+body.mrw-v7 .motion-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;width:100%}
+body.mrw-v7 .motion-media{aspect-ratio:1.38!important;position:relative;display:block;background:#11171b!important;overflow:hidden!important}
+body.mrw-v7 .motion-media .card-photo,body.mrw-v7 .motion-media .motion-cover{position:absolute;left:0;top:0;width:100%!important;height:calc(100% - 53px)!important;object-fit:contain!important;object-position:center!important;transform:none!important;filter:brightness(.94) saturate(.88)!important;padding:6px}
+body.mrw-v7 .motion-media:after{display:none!important}
+body.mrw-v7 .motion-media .media-action{height:53px;bottom:0;left:0;right:0;padding:8px 15px;border-top:1px solid var(--line);background:#0a1015;color:#f5f7f8}
+body.mrw-v7 .motion-media .media-action>span{font-size:10px;letter-spacing:.04em}
+body.mrw-v7 .motion-media .motion-number{top:12px;left:13px;background:#080c0fc9;color:#f5f5f5;padding:3px 6px;border-radius:2px}
+body.mrw-v7 .motion-media[data-video='870918']{background:#f3f4f5!important}
+body.mrw-v7 .motion-media[data-video='870918'] img{padding:10px 12px 8px!important;filter:none!important}
+body.mrw-v7 .motion-copy h3{font-size:21px;line-height:1.2}
+body.mrw-v7 .motion-copy p{font-size:14px}
+body.mrw-v7 .about{background:#0b1014!important;color:#f5f7f8!important}
+body.mrw-v7 .about .lead,body.mrw-v7 .about h2{color:#f5f7f8!important}
+body.mrw-v7 .about-grid{grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,88px)}
+body.mrw-v7 .about-visual{margin:28px 0 0;width:100%;max-width:920px;border:1px solid var(--line);border-radius:3px;overflow:hidden;background:#0b1014}
+body.mrw-v7 .about-visual img{display:block;width:100%;height:auto;aspect-ratio:706/299;object-fit:contain;transform:none;filter:none}
+body.mrw-v7 .about+.mission{margin-top:0!important}
+body.mrw-v7 .mission{width:100%!important;max-width:none!important;margin:0!important;min-height:330px}
+body.mrw-v7 .mission-art{width:75%;inset:0 0 0 auto}
+body.mrw-v7 .mission-art img{object-fit:contain;object-position:right center}
+body.mrw-v7 .mission+.mission-separator{margin:0!important}
+body.mrw-v7 .manufacturer-network{position:relative;isolation:isolate;width:100%;max-width:none;padding:38px var(--gutter) 19px;background:#090e12;border-block:1px solid var(--line);overflow:hidden}
+body.mrw-v7 .network-world{position:absolute;inset:-20px 8% -30px 24%;width:68%;height:120%;z-index:-1;opacity:.65;pointer-events:none}
+body.mrw-v7 .network-content{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(0,2.4fr) auto;gap:36px;align-items:center}
+body.mrw-v7 .network-copy .eyebrow{font-size:9px;letter-spacing:.16em;margin-bottom:10px;gap:12px}
+body.mrw-v7 .network-copy h2{font-size:clamp(28px,2.05vw,38px);line-height:1.05;letter-spacing:-.035em}
+body.mrw-v7 .network-copy>p:last-child{font-size:12px;margin-top:12px;max-width:320px;line-height:1.65}
+body.mrw-v7 .network-logos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px 24px;align-items:center;justify-items:center;min-width:0;padding-block:6px}
+body.mrw-v7 .network-logo{display:flex;align-items:center;justify-content:center;width:100%;height:48px;min-width:0}
+body.mrw-v7 .network-logo img{display:block;max-width:100%;width:auto;max-height:40px;height:auto;object-fit:contain;filter:grayscale(1) brightness(0) invert(.82);opacity:.88;transition:opacity .2s}
+body.mrw-v7 .network-logo:hover img{opacity:1}
+body.mrw-v7 .network-logo[data-brand='rolls-royce'] img{max-height:51px;filter:grayscale(1) brightness(1.4);background:transparent}
+body.mrw-v7 .network-logo[data-brand='zf'] img,body.mrw-v7 .network-logo[data-brand='cummins'] img{height:43px;max-height:43px;width:auto}
+body.mrw-v7 .network-logo[data-brand='general-dynamics'] img{min-width:135px;max-width:100%}
+body.mrw-v7 .network-cta{border:1px solid var(--accent);border-radius:30px;white-space:nowrap;font-size:10px;padding:13px 20px}
+body.mrw-v7 .network-legal{font-size:10px;line-height:1.6;margin-top:22px;border-top:1px solid #ffffff10;padding-top:13px;color:#83909a}
+body.mrw-v7 .supplier-visual{max-width:none!important}
+body.mrw-v7 .footer-brand-band{grid-template-columns:1.2fr 1fr .85fr}
+@media(min-width:2200px){body.mrw-v7 .hero{min-height:920px}body.mrw-v7 .service-intro{min-height:640px}body.mrw-v7 .government-intro{min-height:580px!important}}
+@media(max-width:1200px){body.mrw-v7 .network-content{grid-template-columns:minmax(230px,.65fr) 1.35fr;gap:25px}body.mrw-v7 .network-cta{grid-column:1;grid-row:2;justify-self:start;margin-top:-8px}body.mrw-v7 .network-logos{grid-column:2;grid-row:1/3;gap:18px;grid-template-columns:repeat(3,minmax(0,1fr))}body.mrw-v7 .network-logo:last-child{grid-column:2}body.mrw-v7 .service-grid,body.mrw-v7 .motion-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}body.mrw-v7 .motion-media{aspect-ratio:1.6!important}}
+@media(max-width:760px){body.mrw-v7{--gutter:22px}body.mrw-v7 .hero{min-height:690px;padding-top:128px}body.mrw-v7 .hero-art img{object-fit:cover!important;object-position:68% center!important}body.mrw-v7 .auto-art img{object-fit:cover!important;object-position:68% center!important}body.mrw-v7 .government-art img{object-fit:contain!important;object-position:right bottom!important;opacity:.75}body.mrw-v7 .service-intro{min-height:600px}body.mrw-v7 .government-intro{min-height:570px!important}body.mrw-v7 .government-intro .cinematic-shade{background:linear-gradient(90deg,#080c0feb,#080c0f55),linear-gradient(180deg,#080c0f 5%,#080c0fd9 36%,transparent 70%,#080c0f)!important}body.mrw-v7 .about-grid{grid-template-columns:1fr}body.mrw-v7 .network-content{grid-template-columns:1fr;gap:23px}body.mrw-v7 .network-logos{grid-column:1;grid-row:auto;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px 20px}body.mrw-v7 .network-cta{grid-column:1;grid-row:auto;justify-self:start;margin-top:0}body.mrw-v7 .network-copy>p:last-child{max-width:440px}body.mrw-v7 .network-world{inset:85px -35% 0 -30%;width:165%;height:72%}body.mrw-v7 .network-logo[data-brand='general-dynamics'] img{min-width:0}body.mrw-v7 .footer-brand-band{grid-template-columns:1fr}}
+@media(max-width:540px){body.mrw-v7 .service-grid,body.mrw-v7 .motion-grid{grid-template-columns:1fr!important}body.mrw-v7 .service-copy{padding:24px}body.mrw-v7 .service-copy h3{font-size:20px}body.mrw-v7 .motion-media{aspect-ratio:1.35!important}body.mrw-v7 .hero h1{font-size:clamp(35px,9.3vw,49px)}body.mrw-v7 .network-logos{grid-template-columns:repeat(2,minmax(0,1fr))}body.mrw-v7 .network-logo:last-child{grid-column:auto}body.mrw-v7 .network-copy .eyebrow{font-size:8px}body.mrw-v7 .mission{min-height:300px}body.mrw-v7 .mission-art{width:100%;opacity:.6}}
+@media(prefers-reduced-motion:reduce){body.mrw-v7 *{scroll-behavior:auto;transition:none!important}}
