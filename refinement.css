@@ -106,29 +106,29 @@ body.mrw-v8 .network-logo img[src*="denso"]{transform:scale(.86)!important}
  body.mrw-v8 #supply-categories .supply-tuned-card{transform:none}
 }
 
-/* V13 — About aerial pulled back to show the full campus, matching approved wide mockup */
+/* V14 — final wide aerial About artwork, intentionally pulled back */
 body.mrw-v8 .about{min-height:720px!important}
 body.mrw-v8 .about-backdrop{
  width:100%!important;right:0!important;inset:0!important;background:#080c0f!important;
  display:flex!important;justify-content:flex-end!important;align-items:center!important
 }
 body.mrw-v8 .about-backdrop img{
- width:100%!important;height:100%!important;object-fit:contain!important;
- object-position:right center!important;transform:none!important;filter:none!important;
- mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 15%,rgba(0,0,0,.72) 31%,#000 45%)!important;
- -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 15%,rgba(0,0,0,.72) 31%,#000 45%)!important
+ width:100%!important;height:100%!important;object-fit:cover!important;
+ object-position:center center!important;transform:none!important;filter:none!important;
+ mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.10) 16%,rgba(0,0,0,.55) 30%,#000 44%)!important;
+ -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.10) 16%,rgba(0,0,0,.55) 30%,#000 44%)!important
 }
 body.mrw-v8 .about-shade{
  background:
- linear-gradient(90deg,#080c0f 0%,#080c0ffd 24%,#080c0fea 35%,#080c0f9c 49%,#080c0f36 66%,transparent 81%),
- linear-gradient(0deg,#080c0f 0%,transparent 18%,transparent 90%,#080c0f55)!important
+ linear-gradient(90deg,#080c0f 0%,#080c0ffd 22%,#080c0fe7 34%,#080c0fa0 48%,#080c0f35 66%,transparent 82%),
+ linear-gradient(0deg,#080c0f 0%,transparent 16%,transparent 91%,#080c0f55)!important
 }
 @media(max-width:1180px){
- body.mrw-v8 .about-backdrop img{object-fit:cover!important;object-position:62% center!important}
+ body.mrw-v8 .about-backdrop img{object-position:58% center!important}
 }
 @media(max-width:760px){
  body.mrw-v8 .about-backdrop{height:620px!important;inset:auto 0 0!important;width:100%!important}
- body.mrw-v8 .about-backdrop img{object-fit:cover!important;object-position:67% center!important}
+ body.mrw-v8 .about-backdrop img{object-position:63% center!important}
 }
 
 /* V12 — crisp, readable two-row supply-category tags */
