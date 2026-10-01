@@ -52,16 +52,16 @@ if(await fs.stat('refinement-fixes.css').catch(()=>null))html=html.replace('</he
 const sepMatch=html.match(/<section\b[^>]*class="[^"]*mission-separator[^"]*"[^>]*>[\s\S]*?<\/section>/);
 const missionMatch=html.match(/<section\b[^>]*class="[^"]*\bmission\b[^"]*"[^>]*>/);
 if(sepMatch && missionMatch){ html=html.replace(sepMatch[0],''); const mi=html.indexOf(missionMatch[0]); if(mi>=0) html=html.slice(0,mi)+sepMatch[0]+html.slice(mi); }
-const v9SupplyExtras={
- 'LAND SYSTEMS':['Wheel & Hub Assemblies','Drivetrain Components','Road Wheels','Vehicle Hardware'],
- 'AEROSPACE':['Actuation Components','Flight Hardware','Structural Components','Aerospace Fasteners'],
- 'MECHANICAL':['Bushings','Shafts & Couplings','Precision Hardware','Transmission Components'],
- 'FLUID & SEALING':['Valves & Fittings','O-Rings & Seals','Fluid Connectors','Pressure Components'],
- 'ELECTRICAL':['Connectors','Sensors','Relays & Switches','Power Distribution'],
- 'INDUSTRIAL':['Bearings & Hardware','Machined Components','Maintenance Supply','Specialty Components']
+const v11SupplyExtras={
+ 'LAND SYSTEMS':['Road Wheels','Wheel & Hub Assemblies','Drivetrain Components'],
+ 'AEROSPACE':['Actuation Components','Flight Controls','Structural Hardware','Aerospace Fasteners'],
+ 'MECHANICAL':['Bushings','Shafts & Couplings','Precision Hardware'],
+ 'FLUID & SEALING':['O-Rings','Fluid Connectors','Valves & Fittings','Pressure Components'],
+ 'ELECTRICAL':['Connectors','Relays & Switches','Power Distribution','Circuit Protection','Terminal Blocks'],
+ 'INDUSTRIAL':['Industrial Hoses','Abrasives & Cutting Tools','Material Handling','Maintenance Supplies','Specialty Hardware','Shop Equipment']
 };
-const v9ClientScript='<script id="mrw-v9-client">document.addEventListener("DOMContentLoaded",()=>{const extras='+JSON.stringify(v9SupplyExtras)+';const heads=[...document.querySelectorAll("h1,h2,h3,h4")];for(const h of heads){const key=(h.textContent||"").trim().toUpperCase();if(!extras[key])continue;let card=h;for(let i=0;i<6&&card;i++,card=card.parentElement){if(card.querySelector&&card.querySelector("img")&&(card.textContent||"").includes("DISCUSS A REQUIREMENT"))break;}if(!card)continue;card.classList.add("supply-tuned-card");const leaves=[...card.querySelectorAll("span,button,a")].filter(e=>e.children.length===0);const seed=leaves.find(e=>["Bushings","Aircraft Components","Bearings","Hose Assemblies","Electrical Components","Fasteners & Hardware"].includes((e.textContent||"").trim()));const box=seed?.parentElement;if(!box)continue;box.classList.add("supply-tags-v9");const existing=new Set([...box.children].map(e=>(e.textContent||"").trim()));for(const label of extras[key]){if(existing.has(label))continue;const el=document.createElement("span");el.textContent=label;box.appendChild(el);}}});<\/script>';
-html=html.replace('</body>',v9ClientScript+'</body>');
+const v11ClientScript='<script id="mrw-v11-supply-tags">document.addEventListener("DOMContentLoaded",()=>{const extras='+JSON.stringify(v11SupplyExtras)+';for(const h of document.querySelectorAll(".category-card h3")){const key=(h.textContent||"").trim().toUpperCase();if(!extras[key])continue;const card=h.closest(".category-card");const box=card?.querySelector(".product-tags");if(!box)continue;card.classList.add("supply-tuned-card");box.classList.add("supply-tags-v11");const existing=new Set([...box.children].map(e=>(e.textContent||"").trim()));for(const label of extras[key]){if(existing.has(label))continue;const li=document.createElement("li");li.textContent=label;box.appendChild(li);}}});<\/script>';
+html=html.replace('</body>',v11ClientScript+'</body>');
 html=html.replaceAll('viewbox=','viewBox=');
 html=html.replaceAll('content="noindex,nofollow" name="robots"','content="index,follow" name="robots"');
 html=html.replaceAll('content="noindex, nofollow" name="robots"','content="index,follow" name="robots"');
