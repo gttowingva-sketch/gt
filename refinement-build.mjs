@@ -43,8 +43,8 @@ for(const name of ['soldier-sunset-clean.webp','warehouse-scene.webp'])await fs.
 html=html.replace('</head>',`<style id="mrw-v8-refinements">${await fs.readFile('refinement.css','utf8')}</style><meta name="mrwheels-revision" content="refined-v8-20260930"></head>`);
 if(await fs.stat('refinement-fixes.css').catch(()=>null))html=html.replace('</head>',`<style id="mrw-v8-render-fixes">${await fs.readFile('refinement-fixes.css','utf8')}</style></head>`);
 // V9 layout: use the icon/focus strip as breathing room between About and Mission.
-const sepMatch=html.match(/<section\\b[^>]*class=\"[^\"]*mission-separator[^\"]*\"[^>]*>[\\s\\S]*?<\\/section>/);
-const missionMatch=html.match(/<section\\b[^>]*class=\"[^\"]*\\bmission\\b[^\"]*\"[^>]*>/);
+const sepMatch=html.match(/<section\b[^>]*class="[^"]*mission-separator[^"]*"[^>]*>[\s\S]*?<\/section>/);
+const missionMatch=html.match(/<section\b[^>]*class="[^"]*\bmission\b[^"]*"[^>]*>/);
 if(sepMatch && missionMatch){ html=html.replace(sepMatch[0],''); const mi=html.indexOf(missionMatch[0]); if(mi>=0) html=html.slice(0,mi)+sepMatch[0]+html.slice(mi); }
 const v9SupplyExtras={
  'LAND SYSTEMS':['Wheel & Hub Assemblies','Drivetrain Components','Road Wheels','Vehicle Hardware'],
