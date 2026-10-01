@@ -106,21 +106,30 @@ body.mrw-v8 .network-logo img[src*="denso"]{transform:scale(.86)!important}
  body.mrw-v8 #supply-categories .supply-tuned-card{transform:none}
 }
 
-/* V10 — selected aerial MR.WHEELS facility artwork for About only */
+/* V13 — About aerial pulled back to show the full campus, matching approved wide mockup */
 body.mrw-v8 .about{min-height:720px!important}
-body.mrw-v8 .about-backdrop{width:78%!important;right:0!important;inset:0 0 0 auto!important}
+body.mrw-v8 .about-backdrop{
+ width:100%!important;right:0!important;inset:0!important;background:#080c0f!important;
+ display:flex!important;justify-content:flex-end!important;align-items:center!important
+}
 body.mrw-v8 .about-backdrop img{
- width:100%!important;height:100%!important;object-fit:cover!important;
- object-position:center center!important;transform:none!important;filter:none!important;
- mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.28) 16%,#000 37%)!important;
- -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.28) 16%,#000 37%)!important
+ width:100%!important;height:100%!important;object-fit:contain!important;
+ object-position:right center!important;transform:none!important;filter:none!important;
+ mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 15%,rgba(0,0,0,.72) 31%,#000 45%)!important;
+ -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 15%,rgba(0,0,0,.72) 31%,#000 45%)!important
 }
 body.mrw-v8 .about-shade{
- background:linear-gradient(90deg,#080c0f 0%,#080c0ffa 27%,#080c0fe6 38%,#080c0fa8 51%,#080c0f55 64%,transparent 82%),
- linear-gradient(0deg,#080c0f 0%,transparent 20%,transparent 88%,#080c0f55)!important
+ background:
+ linear-gradient(90deg,#080c0f 0%,#080c0ffd 24%,#080c0fea 35%,#080c0f9c 49%,#080c0f36 66%,transparent 81%),
+ linear-gradient(0deg,#080c0f 0%,transparent 18%,transparent 90%,#080c0f55)!important
 }
-@media(max-width:1000px){body.mrw-v8 .about-backdrop{width:100%!important;opacity:.72}}
-@media(max-width:760px){body.mrw-v8 .about-backdrop{height:620px!important;inset:auto 0 0!important;width:100%!important}body.mrw-v8 .about-backdrop img{object-position:64% center!important}}
+@media(max-width:1180px){
+ body.mrw-v8 .about-backdrop img{object-fit:cover!important;object-position:62% center!important}
+}
+@media(max-width:760px){
+ body.mrw-v8 .about-backdrop{height:620px!important;inset:auto 0 0!important;width:100%!important}
+ body.mrw-v8 .about-backdrop img{object-fit:cover!important;object-position:67% center!important}
+}
 
 /* V12 — crisp, readable two-row supply-category tags */
 body.mrw-v8 #supply-categories .category-media{height:158px!important}
