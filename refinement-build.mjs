@@ -13,6 +13,14 @@ if(!flagChanged)throw Error('Flag was not located');
 const art=(cls,file)=>`<div class="${cls}" aria-hidden="true"><img src="assets/${file}" alt="" loading="lazy" decoding="async"></div>`;
 html=html.replace(/(<section\b[^>]*class="[^"]*process-section[^"]*"[^>]*>)/,`$1${art('process-art','soldier-sunset-clean.webp')}<div class="process-shade" aria-hidden="true"></div>`);
 html=html.replace(/(<section\b[^>]*id="about"[^>]*>)/,`$1${art('about-backdrop','about-clean-aerial-final.png')}<div class="about-shade" aria-hidden="true"></div>`);
+const governmentImage='government-sunset-wide.webp';
+await fs.copyFile(`revision-assets/${governmentImage}`,`dist/assets/${governmentImage}`);
+let governmentImageReplaced=false;
+html=html.replace(/(<div class="[^"]*government-art[^"]*">\s*)(<img\b[^>]*>)/,(all,open,img)=>{
+ governmentImageReplaced=true;
+ return open+img.replace(/\bsrc="[^"]*"/,`src="assets/${governmentImage}"`).replace(/\bwidth="[^"]*"/,'width="2170"').replace(/\bheight="[^"]*"/,'height="725"');
+});
+if(!governmentImageReplaced)throw Error('Government image was not located');
 const plane=html.match(/<div class="[^"]*government-art[^"]*">\s*<img[^>]*src="([^"]+)"/);
 if(!plane)throw Error('Aircraft source not located');
 html=html.replace(/(<div class="[^"]*government-art[^"]*">)/,`<div class="government-backdrop" aria-hidden="true" style="background-image:url('${plane[1]}')"></div>$1`);
