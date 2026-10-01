@@ -55,10 +55,10 @@ if(sepMatch && missionMatch){ html=html.replace(sepMatch[0],''); const mi=html.i
 const v11SupplyExtras={
  'LAND SYSTEMS':['Road Wheels','Wheel & Hub Assemblies','Drivetrain Components'],
  'AEROSPACE':['Actuation Components','Flight Controls','Structural Hardware','Aerospace Fasteners'],
- 'MECHANICAL':['Bushings','Shafts & Couplings','Precision Hardware'],
+ 'MECHANICAL':['Bushings','Shafts & Couplings','Precision Hardware','Springs'],
  'FLUID & SEALING':['O-Rings','Fluid Connectors','Valves & Fittings','Pressure Components'],
  'ELECTRICAL':['Connectors','Relays & Switches','Power Distribution','Circuit Protection','Terminal Blocks'],
- 'INDUSTRIAL':['Industrial Hoses','Abrasives & Cutting Tools','Material Handling','Maintenance Supplies','Specialty Hardware','Shop Equipment']
+ 'INDUSTRIAL':['Industrial Hoses','Abrasives & Cutting Tools','Material Handling','Maintenance Supplies','Shop Equipment']
 };
 const v11ClientScript='<script id="mrw-v11-supply-tags">document.addEventListener("DOMContentLoaded",()=>{const extras='+JSON.stringify(v11SupplyExtras)+';for(const h of document.querySelectorAll(".category-card h3")){const key=(h.textContent||"").trim().toUpperCase();if(!extras[key])continue;const card=h.closest(".category-card");const box=card?.querySelector(".product-tags");if(!box)continue;card.classList.add("supply-tuned-card");box.classList.add("supply-tags-v11");const existing=new Set([...box.children].map(e=>(e.textContent||"").trim()));for(const label of extras[key]){if(existing.has(label))continue;const li=document.createElement("li");li.textContent=label;box.appendChild(li);}}});<\/script>';
 html=html.replace('</body>',v11ClientScript+'</body>');
