@@ -64,3 +64,44 @@ body.mrw-v8 .principles>div{background:#0a1118bb!important;backdrop-filter:blur(
 @media(max-width:1000px){body.mrw-v8 .mission-icons{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:20px}body.mrw-v8 .mission-icon .focus-symbol{width:47px!important;height:43px!important;flex-basis:47px}body.mrw-v8 .mission-icon .focus-label{font-size:11px!important}body.mrw-v8 .focus-label small{font-size:7.3px}body.mrw-v8 .mission-icon:nth-child(3n){border-right:0}body.mrw-v8 .process-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:35px}body.mrw-v8 .process-heading{margin-bottom:65px}body.mrw-v8 .about-grid{width:67%;max-width:none}body.mrw-v8 .about-backdrop{width:100%;opacity:.75}}
 @media(max-width:760px){body.mrw-v8 .mission{padding-block:48px;min-height:335px}body.mrw-v8 .mission-art img{width:auto!important;height:100%!important;max-width:none!important;right:-24%;opacity:.65}body.mrw-v8 .mission .cinematic-shade{background:linear-gradient(90deg,#080c0fea,#080c0f91 64%,#080c0f44)!important}body.mrw-v8 .mission h2{font-size:29px;max-width:560px}body.mrw-v8 .government-intro{min-height:565px!important}body.mrw-v8 .government-art img{top:auto!important;bottom:0;right:-18%;height:auto!important;width:125%!important;transform:none!important;opacity:.65}body.mrw-v8 .government-intro .cinematic-shade{background:linear-gradient(180deg,#080c0ff5,#080c0fcc 30%,#080c0f55 70%,#080c0f),linear-gradient(90deg,#080c0fa9,transparent)!important}body.mrw-v8 .process-section{padding-top:62px;padding-bottom:62px;min-height:720px}body.mrw-v8 .process-art{width:100%;height:370px;top:0;opacity:.8}body.mrw-v8 .process-heading{max-width:100%;margin-bottom:90px}body.mrw-v8 .process-heading h2{max-width:560px}body.mrw-v8 .process-shade{background:linear-gradient(0deg,#080c0f,#080c0f 41%,#080c0f60 70%,#080c0f5c),linear-gradient(90deg,#080c0fc9,transparent)}body.mrw-v8 .process-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}body.mrw-v8 .about{min-height:940px;padding-top:58px;padding-bottom:260px}body.mrw-v8 .about-grid{width:100%;max-width:none}body.mrw-v8 .about-backdrop{inset:auto 0 0;width:100%;height:600px;opacity:.8}body.mrw-v8 .about-backdrop img{object-position:right bottom;mask-image:none;-webkit-mask-image:none}body.mrw-v8 .about-shade{background:linear-gradient(180deg,#080c0f,#080c0f 42%,#080c0fcc 62%,#080c0f44 88%,#080c0f)}body.mrw-v8 .network-content{grid-template-columns:1fr}body.mrw-v8 .network-logos{grid-column:1;grid-row:auto;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}body.mrw-v8 .network-cta{grid-row:auto;grid-column:1}body.mrw-v8 .network-world{inset:70px -10% 0;width:120%;height:85%}body.mrw-v8 .mission-separator-inner{grid-template-columns:1fr}body.mrw-v8 .mission-flag{display:flex;gap:18px;align-items:center;justify-content:center;border-left:0;border-top:1px solid #ffffff16;padding:18px 0 0;margin-top:10px}body.mrw-v8 .mission-flag .us-flag{margin:0;width:62px}}
 @media(max-width:480px){body.mrw-v8 .mission-icons{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 0}body.mrw-v8 .mission-icon:nth-child(3n){border-right:1px solid #ffffff16}body.mrw-v8 .mission-icon:nth-child(2n){border-right:0}body.mrw-v8 .network-logos{grid-template-columns:repeat(2,minmax(0,1fr))}body.mrw-v8 .network-logo:last-child{grid-column:auto}body.mrw-v8 .network-logo img{max-width:145px!important;height:54px!important}body.mrw-v8 .principles{grid-template-columns:1fr!important}body.mrw-v8 .principles>div{min-height:100px}body.mrw-v8 .about{min-height:1150px}body.mrw-v8 .process-step h3{font-size:12px}body.mrw-v8 .process-step p{font-size:11px}}
+
+
+/* V9 — user-requested final scale/spacing refinements only */
+body.mrw-v8 .about{min-height:680px!important}
+body.mrw-v8 .about-backdrop{width:68%!important;right:2%!important}
+body.mrw-v8 .about-backdrop img{object-fit:contain!important;object-position:right center!important;filter:none!important}
+body.mrw-v8 .about-shade{background:linear-gradient(90deg,#080c0f 0%,#080c0ff8 27%,#080c0fda 40%,#080c0f85 54%,#080c0f28 70%,transparent 88%)!important}
+body.mrw-v8 .mission{margin-top:0!important}
+body.mrw-v8 .mission-separator{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);background:#091015!important}
+body.mrw-v8 .process-art{width:61%!important;right:2%!important}
+body.mrw-v8 .process-art img{object-fit:contain!important;object-position:right center!important;filter:none!important}
+body.mrw-v8 .process-shade{background:linear-gradient(90deg,#080c0f 0%,#080c0ff7 31%,#080c0fbb 46%,#080c0f52 61%,transparent 78%),linear-gradient(0deg,#080c0f 0%,#080c0fd9 20%,transparent 58%)!important}
+body.mrw-v8 .motion-media:not([data-video]) .motion-stage img:not(.media-ambience){object-fit:cover!important;width:100%!important;height:100%!important}
+body.mrw-v8 .motion-media:not([data-video]) .motion-stage .media-ambience{display:none!important}
+body.mrw-v8 .government-art img{width:49%!important;right:1.5%!important}
+body.mrw-v8 .government-backdrop{filter:blur(10px) brightness(.42)!important;opacity:.46!important;transform:scale(1.015)!important}
+body.mrw-v8 #automotive .approved-mockup-section img,
+body.mrw-v8 #automotive .automotive-approved img,
+body.mrw-v8 #automotive img.automotive-approved{object-fit:contain!important;transform:scale(.92)!important;transform-origin:right center!important}
+body.mrw-v8 #supply-categories{padding-top:58px!important;padding-bottom:58px!important}
+body.mrw-v8 #supply-categories .supply-tuned-card{transform:scale(.94);transform-origin:center;min-height:0!important}
+body.mrw-v8 #supply-categories .supply-tuned-card .supply-tags-v9{display:flex;flex-wrap:wrap;gap:8px;max-height:76px;overflow:hidden}
+body.mrw-v8 #supply-categories .supply-tuned-card .supply-tags-v9 span{white-space:nowrap}
+body.mrw-v8 .network-logo:has(img[src*="timken"]){order:9}
+body.mrw-v8 .network-logo:has(img[src*="rolls-royce"]){order:4}
+body.mrw-v8 .network-logo img[src*="timken"]{transform:scale(.82)!important}
+body.mrw-v8 .network-logo img[src*="rolls-royce"]{transform:scale(1.34)!important}
+body.mrw-v8 .network-logo img[src*="cummins"]{transform:scale(1.20)!important}
+body.mrw-v8 .network-logo img[src*="lockheed-martin"]{transform:scale(1.18)!important}
+body.mrw-v8 .network-logo img[src*="denso"]{transform:scale(.86)!important}
+@media(max-width:1000px){
+ body.mrw-v8 .about-backdrop{width:76%!important;right:0!important}
+ body.mrw-v8 .process-art{width:72%!important;right:0!important}
+ body.mrw-v8 #supply-categories .supply-tuned-card{transform:scale(.97)}
+}
+@media(max-width:760px){
+ body.mrw-v8 .about-backdrop{width:100%!important}
+ body.mrw-v8 .process-art{width:100%!important}
+ body.mrw-v8 .government-art img{width:112%!important;right:-12%!important}
+ body.mrw-v8 #supply-categories .supply-tuned-card{transform:none}
+}
