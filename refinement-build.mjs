@@ -12,7 +12,7 @@ html=html.replace(/(<div class="mission-flag">[\s\S]*?<\/div>)/,block=>{if(!bloc
 if(!flagChanged)throw Error('Flag was not located');
 const art=(cls,file)=>`<div class="${cls}" aria-hidden="true"><img src="assets/${file}" alt="" loading="lazy" decoding="async"></div>`;
 html=html.replace(/(<section\b[^>]*class="[^"]*process-section[^"]*"[^>]*>)/,`$1${art('process-art','soldier-sunset-clean.webp')}<div class="process-shade" aria-hidden="true"></div>`);
-html=html.replace(/(<section\b[^>]*id="about"[^>]*>)/,`$1${art('about-backdrop','about-aerial-v10.jpg')}<div class="about-shade" aria-hidden="true"></div>`);
+html=html.replace(/(<section\b[^>]*id="about"[^>]*>)/,`$1${art('about-backdrop','about-clean-aerial-final.png')}<div class="about-shade" aria-hidden="true"></div>`);
 const plane=html.match(/<div class="[^"]*government-art[^"]*">\s*<img[^>]*src="([^"]+)"/);
 if(!plane)throw Error('Aircraft source not located');
 html=html.replace(/(<div class="[^"]*government-art[^"]*">)/,`<div class="government-backdrop" aria-hidden="true" style="background-image:url('${plane[1]}')"></div>$1`);
@@ -41,6 +41,7 @@ const brands=['caterpillar','bosch','zf','timken','denso','cummins','lockheed-ma
 for(const brand of brands){const name=`${brand}-optical.png`;await fs.copyFile(`revision-assets/${name}`,`dist/assets/${name}`);html=html.replaceAll(`src="assets/${brand}.svg"`,`src="assets/${name}"`);}
 await fs.copyFile('revision-assets/warehouse-scene.webp','dist/assets/warehouse-scene.webp');
 await fs.copyFile('revision-assets/about-aerial-v10.jpg','dist/assets/about-aerial-v10.jpg');
+await fs.copyFile('revision-assets/about-clean-aerial-final.png','dist/assets/about-clean-aerial-final.png');
 const soldierB64=(await Promise.all([0,1,2,3].map(i=>fs.readFile(`revision-assets/soldier-v9.part${i}`,'utf8')))).join('');
 const soldierBytes=Buffer.from(soldierB64,'base64');
 if(soldierBytes.length<25000) throw Error('Approved soldier background asset incomplete');
