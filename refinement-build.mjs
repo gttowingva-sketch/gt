@@ -42,6 +42,20 @@ for(const brand of brands){const name=`${brand}-optical.png`;await fs.copyFile(`
 for(const name of ['soldier-sunset-clean.webp','warehouse-scene.webp'])await fs.copyFile(`revision-assets/${name}`,`dist/assets/${name}`);
 html=html.replace('</head>',`<style id="mrw-v8-refinements">${await fs.readFile('refinement.css','utf8')}</style><meta name="mrwheels-revision" content="refined-v8-20260930"></head>`);
 if(await fs.stat('refinement-fixes.css').catch(()=>null))html=html.replace('</head>',`<style id="mrw-v8-render-fixes">${await fs.readFile('refinement-fixes.css','utf8')}</style></head>`);
+// V9 layout: use the icon/focus strip as breathing room between About and Mission.
+const sepMatch=html.match(/<section\\b[^>]*class=\"[^\"]*mission-separator[^\"]*\"[^>]*>[\\s\\S]*?<\\/section>/);
+const missionMatch=html.match(/<section\\b[^>]*class=\"[^\"]*\\bmission\\b[^\"]*\"[^>]*>/);
+if(sepMatch && missionMatch){ html=html.replace(sepMatch[0],''); const mi=html.indexOf(missionMatch[0]); if(mi>=0) html=html.slice(0,mi)+sepMatch[0]+html.slice(mi); }
+const v9SupplyExtras={
+ 'LAND SYSTEMS':['Wheel & Hub Assemblies','Drivetrain Components','Road Wheels','Vehicle Hardware'],
+ 'AEROSPACE':['Actuation Components','Flight Hardware','Structural Components','Aerospace Fasteners'],
+ 'MECHANICAL':['Bushings','Shafts & Couplings','Precision Hardware','Transmission Components'],
+ 'FLUID & SEALING':['Valves & Fittings','O-Rings & Seals','Fluid Connectors','Pressure Components'],
+ 'ELECTRICAL':['Connectors','Sensors','Relays & Switches','Power Distribution'],
+ 'INDUSTRIAL':['Bearings & Hardware','Machined Components','Maintenance Supply','Specialty Components']
+};
+const v9ClientScript='<script id="mrw-v9-client">document.addEventListener("DOMContentLoaded",()=>{const extras='+JSON.stringify(v9SupplyExtras)+';const heads=[...document.querySelectorAll("h1,h2,h3,h4")];for(const h of heads){const key=(h.textContent||"").trim().toUpperCase();if(!extras[key])continue;let card=h;for(let i=0;i<6&&card;i++,card=card.parentElement){if(card.querySelector&&card.querySelector("img")&&(card.textContent||"").includes("DISCUSS A REQUIREMENT"))break;}if(!card)continue;card.classList.add("supply-tuned-card");const leaves=[...card.querySelectorAll("span,button,a")].filter(e=>e.children.length===0);const seed=leaves.find(e=>["Bushings","Aircraft Components","Bearings","Hose Assemblies","Electrical Components","Fasteners & Hardware"].includes((e.textContent||"").trim()));const box=seed?.parentElement;if(!box)continue;box.classList.add("supply-tags-v9");const existing=new Set([...box.children].map(e=>(e.textContent||"").trim()));for(const label of extras[key]){if(existing.has(label))continue;const el=document.createElement("span");el.textContent=label;box.appendChild(el);}}});<\/script>';
+html=html.replace('</body>',v9ClientScript+'</body>');
 html=html.replaceAll('viewbox=','viewBox=');
 await fs.writeFile('dist/index.html',html);
 await fs.writeFile('dist/revision-status.json',JSON.stringify({revision:'refined-v8-20260930',baseline:'4c707c8b3f14890d20fffc29158ea362713de4c1',motionCards:cards,logos:brands.length,liveSiteChanged:false,sha256:createHash('sha256').update(html).digest('hex')},null,2));
