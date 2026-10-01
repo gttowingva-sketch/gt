@@ -40,13 +40,11 @@ try{
 const brands=['caterpillar','bosch','zf','timken','denso','cummins','lockheed-martin','boeing','rolls-royce','general-dynamics'];
 for(const brand of brands){const name=`${brand}-optical.png`;await fs.copyFile(`revision-assets/${name}`,`dist/assets/${name}`);html=html.replaceAll(`src="assets/${brand}.svg"`,`src="assets/${name}"`);}
 for(const name of ['warehouse-scene.webp'])await fs.copyFile(`revision-assets/${name}`,`dist/assets/${name}`);
-const soldierUrl='https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2607/9822794/1000w_q95.jpg';
-const soldierResp=await fetch(soldierUrl,{headers:{'User-Agent':'MRWheelsWebsite/1.0'}});
-if(!soldierResp.ok) throw Error('Soldier background fetch failed: '+soldierResp.status);
-const soldierBytes=Buffer.from(await soldierResp.arrayBuffer());
-if(soldierBytes.length<10000) throw Error('Soldier background too small');
-await fs.writeFile('dist/assets/soldier-v9.jpg',soldierBytes);
-html=html.replaceAll('assets/soldier-sunset-clean.webp','assets/soldier-v9.jpg');
+const soldierB64=(await Promise.all([0,1,2,3].map(i=>fs.readFile(`revision-assets/soldier-v9.part${i}`,'utf8')))).join('');
+const soldierBytes=Buffer.from(soldierB64,'base64');
+if(soldierBytes.length<25000) throw Error('Approved soldier background asset incomplete');
+await fs.writeFile('dist/assets/soldier-v9-exact.webp',soldierBytes);
+html=html.replaceAll('assets/soldier-sunset-clean.webp','assets/soldier-v9-exact.webp');
 html=html.replace('</head>',`<style id="mrw-v8-refinements">${await fs.readFile('refinement.css','utf8')}</style><meta name="mrwheels-revision" content="refined-v8-20260930"></head>`);
 if(await fs.stat('refinement-fixes.css').catch(()=>null))html=html.replace('</head>',`<style id="mrw-v8-render-fixes">${await fs.readFile('refinement-fixes.css','utf8')}</style></head>`);
 // V9 layout: use the icon/focus strip as breathing room between About and Mission.
