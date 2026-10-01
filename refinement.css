@@ -73,7 +73,7 @@ body.mrw-v8 .about-backdrop img{object-fit:contain!important;object-position:rig
 body.mrw-v8 .about-shade{background:linear-gradient(90deg,#080c0f 0%,#080c0ff8 27%,#080c0fda 40%,#080c0f85 54%,#080c0f28 70%,transparent 88%)!important}
 body.mrw-v8 .mission{margin-top:0!important}
 body.mrw-v8 .mission-separator{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);background:#091015!important}
-body.mrw-v8 .process-art{width:61%!important;right:2%!important}
+body.mrw-v8 .process-art{width:61%!important;right:0!important}
 body.mrw-v8 .process-art img{object-fit:contain!important;object-position:right center!important;filter:none!important}
 body.mrw-v8 .process-shade{background:linear-gradient(90deg,#080c0f 0%,#080c0ff7 31%,#080c0fbb 46%,#080c0f52 61%,transparent 78%),linear-gradient(0deg,#080c0f 0%,#080c0fd9 20%,transparent 58%)!important}
 body.mrw-v8 .motion-media:not([data-video]) .motion-stage img:not(.media-ambience){object-fit:cover!important;width:100%!important;height:100%!important}
