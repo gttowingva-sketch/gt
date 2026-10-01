@@ -14,11 +14,11 @@ body.mrw-v8 .network-logos{padding:0}
 body.mrw-v8 .network-logo img{image-rendering:auto}
 @media(max-width:760px){body.mrw-v8 .government-art img{width:125%!important;right:-18%!important;opacity:.65}body.mrw-v8 .government-intro .cinematic-shade{background:linear-gradient(180deg,#080c0ff5,#080c0fcc 30%,#080c0f55 70%,#080c0f),linear-gradient(90deg,#080c0fa9,transparent)!important}body.mrw-v8 .process-art{width:100%}}
 
-/* Approved panoramic Government artwork: show the whole scene without zooming. */
+/* Muted Government panorama, filling the section through its right edge. */
 body.mrw-v8 .government-art img{
  inset:0!important;width:100%!important;height:100%!important;
- object-fit:contain!important;object-position:center center!important;
- transform:none!important;filter:none!important;opacity:1!important;
+ object-fit:cover!important;object-position:right center!important;
+ transform:none!important;filter:brightness(.72) saturate(.52) contrast(.92)!important;opacity:1!important;
  mask-image:none!important;-webkit-mask-image:none!important
 }
 body.mrw-v8 .government-backdrop{
@@ -26,5 +26,5 @@ body.mrw-v8 .government-backdrop{
  filter:blur(14px) brightness(.48)!important;opacity:.55!important;transform:none!important
 }
 @media(max-width:760px){
- body.mrw-v8 .government-art img{object-position:center bottom!important}
+ body.mrw-v8 .government-art img{object-fit:contain!important;object-position:right bottom!important}
 }
