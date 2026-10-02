@@ -1,0 +1,24 @@
+/* Isolated Automotive partner strip. No existing section or logo styles change. */
+#automotive-network{position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:none;margin:46px 0 38px;background:#080e12;border-top:1px solid #ccd8e12b;border-bottom:1px solid #ccd8e12b;color:#f4f6f7;font-family:Arial,Helvetica,sans-serif;scroll-margin-top:95px}
+#automotive-network,#automotive-network *{box-sizing:border-box}
+#automotive-network .an-map{position:absolute;z-index:-1;left:27%;top:-15%;width:57%;height:134%;object-fit:contain;opacity:.60;pointer-events:none;mask-image:linear-gradient(90deg,transparent,#000 14%,#000 83%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 83%,transparent)}
+#automotive-network .an-container{padding:54px var(--gutter,3.3vw) 22px;margin:0;width:100%}
+#automotive-network .an-layout{display:grid;grid-template-columns:minmax(320px,1.06fr) minmax(0,2.54fr) minmax(180px,.53fr);align-items:center;gap:30px}
+#automotive-network .an-copy{min-width:0}
+#automotive-network .an-eyebrow{display:flex;align-items:center;gap:15px;margin:0 0 18px;font-size:11px;font-weight:700;letter-spacing:.16em;line-height:1.5;color:#e1e6e9}
+#automotive-network .an-eyebrow:before{content:'';height:2px;width:36px;background:#ff7c26;flex:0 0 36px}
+#automotive-network h2{margin:0;color:#f6f7f8;font-size:clamp(30px,2.4vw,48px);font-weight:800;line-height:1.08;letter-spacing:-.035em}
+#automotive-network .an-description{margin:22px 0 0;max-width:485px;font-size:15px;line-height:1.75;color:#bdc8cf}
+#automotive-network .an-logos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:38px 22px;align-items:center;justify-items:center;list-style:none;margin:0;padding:8px 0;min-width:0}
+#automotive-network .an-logo{display:flex;align-items:center;justify-content:center;min-width:0;width:100%;height:56px;margin:0;padding:0}
+#automotive-network .an-logo img{display:block;width:var(--an-width);max-width:100%;height:auto;max-height:52px;object-fit:contain;object-position:center;transform:none;filter:none;opacity:1}
+#automotive-network .an-cta{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:54px;max-width:100%;padding:15px 20px;border:1px solid #ff7c26;border-radius:999px;background:transparent;color:#f5f7f8;text-decoration:none;white-space:nowrap;font-size:11px;line-height:1.5;font-weight:700;letter-spacing:.07em;transition:background .2s,border-color .2s}
+#automotive-network .an-cta svg{display:block;width:20px;height:20px;flex:0 0 20px;color:#ff7c26}
+#automotive-network .an-cta:hover{background:#ff7c2612;border-color:#ff9149}
+#automotive-network .an-cta:focus-visible{outline:2px solid #ff7c26;outline-offset:5px}
+#automotive-network .an-note{border-top:1px solid #d3dfe323;margin:38px 0 0;padding:14px 0 0;font-size:9px;line-height:1.6;font-weight:400;color:#92a1aa}
+@media(min-width:2200px){#automotive-network .an-container{padding-block:64px 26px}#automotive-network .an-layout{grid-template-columns:1.06fr 2.54fr .53fr}#automotive-network .an-logo img{max-width:100%}}
+@media(max-width:1400px){#automotive-network .an-layout{grid-template-columns:minmax(275px,.9fr) minmax(0,2fr);gap:24px 36px}#automotive-network .an-copy{grid-column:1;grid-row:1}#automotive-network .an-logos{grid-column:2;grid-row:1/3;gap:34px 20px}#automotive-network .an-cta{grid-column:1;grid-row:2;justify-self:start;margin-top:0}#automotive-network .an-description{font-size:14px;margin-top:18px}#automotive-network .an-eyebrow{font-size:10px}#automotive-network .an-note{margin-top:30px}}
+@media(max-width:1000px){#automotive-network .an-layout{grid-template-columns:1fr;gap:26px}#automotive-network .an-copy,#automotive-network .an-logos,#automotive-network .an-cta{grid-column:1;grid-row:auto}#automotive-network .an-copy{max-width:600px}#automotive-network .an-description{max-width:600px}#automotive-network .an-logos{gap:26px 22px;padding-block:5px}#automotive-network .an-map{inset:60px -5% 0 10%;width:100%;height:85%;opacity:.50}#automotive-network .an-container{padding-top:36px}#automotive-network .an-note{font-size:10px}}
+@media(max-width:600px){#automotive-network{margin-block:32px}#automotive-network .an-container{padding:32px 22px 20px}#automotive-network .an-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:23px 30px}#automotive-network .an-logo{height:56px}#automotive-network .an-logo img{max-width:100%;max-height:48px}#automotive-network .an-map{left:-32%;top:140px;width:165%;height:70%}#automotive-network .an-eyebrow{font-size:9px;gap:12px}#automotive-network .an-eyebrow:before{width:27px;flex-basis:27px}#automotive-network .an-cta{width:auto;justify-self:start;min-height:50px}#automotive-network .an-note{margin-top:27px}#automotive-network h2{font-size:34px}}
+@media(prefers-reduced-motion:reduce){#automotive-network .an-cta{transition:none}}

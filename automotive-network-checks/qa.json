@@ -1,0 +1,427 @@
+{
+  "passed": true,
+  "revision": "automotive-network-20261002",
+  "scope": "One new Automotive partner band only",
+  "results": [
+    {
+      "width": 390,
+      "bandWidth": 390,
+      "bandHeight": 757.71875,
+      "overflow": 0,
+      "previousId": "automotive",
+      "nextId": "government",
+      "brands": [
+        "penske",
+        "autonation",
+        "sonic",
+        "carmax",
+        "carvana",
+        "asbury",
+        "lindsay",
+        "ourisman",
+        "hertz",
+        "enterprise"
+      ],
+      "loadedLogos": 10,
+      "mapLoaded": true,
+      "logoSizes": [
+        {
+          "brand": "penske",
+          "width": 125,
+          "height": 32.359375
+        },
+        {
+          "brand": "autonation",
+          "width": 142,
+          "height": 29.65625
+        },
+        {
+          "brand": "sonic",
+          "width": 112,
+          "height": 47.859375
+        },
+        {
+          "brand": "carmax",
+          "width": 148,
+          "height": 30.78125
+        },
+        {
+          "brand": "carvana",
+          "width": 158,
+          "height": 38.15625
+        },
+        {
+          "brand": "asbury",
+          "width": 151,
+          "height": 38.640625
+        },
+        {
+          "brand": "lindsay",
+          "width": 145,
+          "height": 34.21875
+        },
+        {
+          "brand": "ourisman",
+          "width": 131,
+          "height": 47.546875
+        },
+        {
+          "brand": "hertz",
+          "width": 102,
+          "height": 38.8125
+        },
+        {
+          "brand": "enterprise",
+          "width": 158,
+          "height": 43.6875
+        }
+      ],
+      "noteFont": "10px",
+      "text": "We support leading dealership groups and automotive partners with recurring reconditioning, appearance support and service programs for dealership and fleet.",
+      "brokenImages": [],
+      "automotiveCards": 4,
+      "governmentCards": 4,
+      "supplyCards": 6,
+      "manufacturerLogos": 10,
+      "aboutImage": "assets/about-clean-aerial-final.png",
+      "automotiveContactButtonWorks": true,
+      "originalCapabilityButtonWorks": true
+    },
+    {
+      "width": 768,
+      "bandWidth": 768,
+      "bandHeight": 507.390625,
+      "overflow": 0,
+      "previousId": "automotive",
+      "nextId": "government",
+      "brands": [
+        "penske",
+        "autonation",
+        "sonic",
+        "carmax",
+        "carvana",
+        "asbury",
+        "lindsay",
+        "ourisman",
+        "hertz",
+        "enterprise"
+      ],
+      "loadedLogos": 10,
+      "mapLoaded": true,
+      "logoSizes": [
+        {
+          "brand": "penske",
+          "width": 125,
+          "height": 32.359375
+        },
+        {
+          "brand": "autonation",
+          "width": 125.859375,
+          "height": 26.28125
+        },
+        {
+          "brand": "sonic",
+          "width": 112,
+          "height": 47.859375
+        },
+        {
+          "brand": "carmax",
+          "width": 125.859375,
+          "height": 26.171875
+        },
+        {
+          "brand": "carvana",
+          "width": 125.875,
+          "height": 30.390625
+        },
+        {
+          "brand": "asbury",
+          "width": 125.859375,
+          "height": 32.203125
+        },
+        {
+          "brand": "lindsay",
+          "width": 125.859375,
+          "height": 29.703125
+        },
+        {
+          "brand": "ourisman",
+          "width": 125.859375,
+          "height": 45.6875
+        },
+        {
+          "brand": "hertz",
+          "width": 102,
+          "height": 38.8125
+        },
+        {
+          "brand": "enterprise",
+          "width": 125.875,
+          "height": 34.8125
+        }
+      ],
+      "noteFont": "10px",
+      "text": "We support leading dealership groups and automotive partners with recurring reconditioning, appearance support and service programs for dealership and fleet.",
+      "brokenImages": [],
+      "automotiveCards": 4,
+      "governmentCards": 4,
+      "supplyCards": 6,
+      "manufacturerLogos": 10,
+      "aboutImage": "assets/about-clean-aerial-final.png",
+      "automotiveContactButtonWorks": true,
+      "originalCapabilityButtonWorks": true
+    },
+    {
+      "width": 1440,
+      "bandWidth": 1440,
+      "bandHeight": 344.203125,
+      "overflow": 0,
+      "previousId": "automotive",
+      "nextId": "government",
+      "brands": [
+        "penske",
+        "autonation",
+        "sonic",
+        "carmax",
+        "carvana",
+        "asbury",
+        "lindsay",
+        "ourisman",
+        "hertz",
+        "enterprise"
+      ],
+      "loadedLogos": 10,
+      "mapLoaded": true,
+      "logoSizes": [
+        {
+          "brand": "penske",
+          "width": 125,
+          "height": 32.359375
+        },
+        {
+          "brand": "autonation",
+          "width": 138.328125,
+          "height": 28.890625
+        },
+        {
+          "brand": "sonic",
+          "width": 112,
+          "height": 47.859375
+        },
+        {
+          "brand": "carmax",
+          "width": 138.328125,
+          "height": 28.765625
+        },
+        {
+          "brand": "carvana",
+          "width": 138.3125,
+          "height": 33.40625
+        },
+        {
+          "brand": "asbury",
+          "width": 138.3125,
+          "height": 35.390625
+        },
+        {
+          "brand": "lindsay",
+          "width": 138.328125,
+          "height": 32.640625
+        },
+        {
+          "brand": "ourisman",
+          "width": 131,
+          "height": 47.546875
+        },
+        {
+          "brand": "hertz",
+          "width": 102,
+          "height": 38.8125
+        },
+        {
+          "brand": "enterprise",
+          "width": 138.3125,
+          "height": 38.25
+        }
+      ],
+      "noteFont": "9px",
+      "text": "We support leading dealership groups and automotive partners with recurring reconditioning, appearance support and service programs for dealership and fleet.",
+      "brokenImages": [],
+      "automotiveCards": 4,
+      "governmentCards": 4,
+      "supplyCards": 6,
+      "manufacturerLogos": 10,
+      "aboutImage": "assets/about-clean-aerial-final.png",
+      "automotiveContactButtonWorks": true,
+      "originalCapabilityButtonWorks": true
+    },
+    {
+      "width": 1920,
+      "bandWidth": 1920,
+      "bandHeight": 330.390625,
+      "overflow": 0,
+      "previousId": "automotive",
+      "nextId": "government",
+      "brands": [
+        "penske",
+        "autonation",
+        "sonic",
+        "carmax",
+        "carvana",
+        "asbury",
+        "lindsay",
+        "ourisman",
+        "hertz",
+        "enterprise"
+      ],
+      "loadedLogos": 10,
+      "mapLoaded": true,
+      "logoSizes": [
+        {
+          "brand": "penske",
+          "width": 125,
+          "height": 32.359375
+        },
+        {
+          "brand": "autonation",
+          "width": 142,
+          "height": 29.65625
+        },
+        {
+          "brand": "sonic",
+          "width": 112,
+          "height": 47.859375
+        },
+        {
+          "brand": "carmax",
+          "width": 148,
+          "height": 30.78125
+        },
+        {
+          "brand": "carvana",
+          "width": 186,
+          "height": 44.921875
+        },
+        {
+          "brand": "asbury",
+          "width": 151,
+          "height": 38.640625
+        },
+        {
+          "brand": "lindsay",
+          "width": 145,
+          "height": 34.21875
+        },
+        {
+          "brand": "ourisman",
+          "width": 131,
+          "height": 47.546875
+        },
+        {
+          "brand": "hertz",
+          "width": 102,
+          "height": 38.8125
+        },
+        {
+          "brand": "enterprise",
+          "width": 169,
+          "height": 46.734375
+        }
+      ],
+      "noteFont": "9px",
+      "text": "We support leading dealership groups and automotive partners with recurring reconditioning, appearance support and service programs for dealership and fleet.",
+      "brokenImages": [],
+      "automotiveCards": 4,
+      "governmentCards": 4,
+      "supplyCards": 6,
+      "manufacturerLogos": 10,
+      "aboutImage": "assets/about-clean-aerial-final.png",
+      "automotiveContactButtonWorks": true,
+      "originalCapabilityButtonWorks": true
+    },
+    {
+      "width": 2560,
+      "bandWidth": 2560,
+      "bandHeight": 346.46875,
+      "overflow": 0,
+      "previousId": "automotive",
+      "nextId": "government",
+      "brands": [
+        "penske",
+        "autonation",
+        "sonic",
+        "carmax",
+        "carvana",
+        "asbury",
+        "lindsay",
+        "ourisman",
+        "hertz",
+        "enterprise"
+      ],
+      "loadedLogos": 10,
+      "mapLoaded": true,
+      "logoSizes": [
+        {
+          "brand": "penske",
+          "width": 125,
+          "height": 32.359375
+        },
+        {
+          "brand": "autonation",
+          "width": 142,
+          "height": 29.65625
+        },
+        {
+          "brand": "sonic",
+          "width": 112,
+          "height": 47.859375
+        },
+        {
+          "brand": "carmax",
+          "width": 148,
+          "height": 30.78125
+        },
+        {
+          "brand": "carvana",
+          "width": 186,
+          "height": 44.921875
+        },
+        {
+          "brand": "asbury",
+          "width": 151,
+          "height": 38.640625
+        },
+        {
+          "brand": "lindsay",
+          "width": 145,
+          "height": 34.21875
+        },
+        {
+          "brand": "ourisman",
+          "width": 131,
+          "height": 47.546875
+        },
+        {
+          "brand": "hertz",
+          "width": 102,
+          "height": 38.8125
+        },
+        {
+          "brand": "enterprise",
+          "width": 169,
+          "height": 46.734375
+        }
+      ],
+      "noteFont": "9px",
+      "text": "We support leading dealership groups and automotive partners with recurring reconditioning, appearance support and service programs for dealership and fleet.",
+      "brokenImages": [],
+      "automotiveCards": 4,
+      "governmentCards": 4,
+      "supplyCards": 6,
+      "manufacturerLogos": 10,
+      "aboutImage": "assets/about-clean-aerial-final.png",
+      "automotiveContactButtonWorks": true,
+      "originalCapabilityButtonWorks": true
+    }
+  ]
+}

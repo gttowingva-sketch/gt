@@ -1,0 +1,136 @@
+{
+  "approvedSourceSha256": "6ded5f7a1e1df0c7521959d76c445e6924b73895269da9743ab57ac2d65376f1",
+  "source": "User-approved stronger_together_automotive_network.png",
+  "logos": [
+    {
+      "id": "penske",
+      "name": "Penske Automotive",
+      "width": 139,
+      "height": 36,
+      "sourceCrop": [
+        625,
+        241,
+        805,
+        306
+      ],
+      "sha256": "1261cc0457b22fa19e2a6af7e574cf14b4dbfed979072f51d8d2d537b313ff72"
+    },
+    {
+      "id": "autonation",
+      "name": "AutoNation",
+      "width": 158,
+      "height": 33,
+      "sourceCrop": [
+        855,
+        240,
+        1042,
+        307
+      ],
+      "sha256": "c1d6cd26839de074b8d19db3bbacadb1505b13d415752c32f335e0c1296dc05f"
+    },
+    {
+      "id": "sonic",
+      "name": "Sonic Automotive",
+      "width": 124,
+      "height": 53,
+      "sourceCrop": [
+        1100,
+        233,
+        1260,
+        311
+      ],
+      "sha256": "b106d05d0cb6901ffbb8651cf7b46ddb326ad0aca97d0fdd69b668ef30518d46"
+    },
+    {
+      "id": "carmax",
+      "name": "CarMax",
+      "width": 149,
+      "height": 31,
+      "sourceCrop": [
+        1320,
+        242,
+        1497,
+        310
+      ],
+      "sha256": "15995628c0dd3634589d0a6a020c609a05908312a86945089c8620c694e810cb"
+    },
+    {
+      "id": "carvana",
+      "name": "Carvana",
+      "width": 207,
+      "height": 50,
+      "sourceCrop": [
+        1547,
+        235,
+        1784,
+        313
+      ],
+      "sha256": "75f743fc54c097c6801c9bb4996f289105d2d641b0879dfbe6d4b12304d14e98"
+    },
+    {
+      "id": "asbury",
+      "name": "Asbury Automotive Group",
+      "width": 168,
+      "height": 43,
+      "sourceCrop": [
+        619,
+        365,
+        815,
+        428
+      ],
+      "sha256": "f0d05db392635fbb2c365c581ab5e1f6ca27c1fd29e4f75f78acbc641bfe4a48"
+    },
+    {
+      "id": "lindsay",
+      "name": "Lindsay Automotive Group",
+      "width": 161,
+      "height": 38,
+      "sourceCrop": [
+        860,
+        365,
+        1047,
+        426
+      ],
+      "sha256": "ec59062067fb201c0e7928e8cddb49b6dbdd5f80eb4d30fa988c5ce3291839fc"
+    },
+    {
+      "id": "ourisman",
+      "name": "Ourisman Automotive Group",
+      "width": 146,
+      "height": 53,
+      "sourceCrop": [
+        1102,
+        366,
+        1268,
+        432
+      ],
+      "sha256": "7c3c52e6c2e425e51ab4153a61f558ce24f45a777080bb54203627db9cd09605"
+    },
+    {
+      "id": "hertz",
+      "name": "Hertz",
+      "width": 113,
+      "height": 43,
+      "sourceCrop": [
+        1350,
+        366,
+        1494,
+        431
+      ],
+      "sha256": "0ef5ded683e16b6b2bc53bc2fe13e96d6b02ceb619d6c109bc243f47a1109320"
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise Rent-A-Car",
+      "width": 188,
+      "height": 52,
+      "sourceCrop": [
+        1569,
+        369,
+        1780,
+        435
+      ],
+      "sha256": "1c0ef6128e0fc7feaa61ca6cd641a8a004224b1f34758d0694b989f74e00a0b3"
+    }
+  ]
+}

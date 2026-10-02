@@ -1,6 +1,6 @@
 {
   "version": 2,
   "framework": null,
-  "buildCommand": "node refinement-build.mjs",
+  "buildCommand": "node automotive-network-build.mjs",
   "outputDirectory": "dist"
 }
