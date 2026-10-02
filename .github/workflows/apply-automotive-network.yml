@@ -1,0 +1,58 @@
+name: Apply approved Automotive partner band
+on:
+  push:
+    branches: [automotive-network-20261002]
+    paths: [.github/workflows/apply-automotive-network.yml]
+permissions:
+  contents: write
+jobs:
+  apply-and-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: automotive-network-20261002
+      - name: Retrieve and verify approved asset bundle
+        env:
+          SOURCE: 'https://sdmntprsoutheastus3.oaiusercontent.com/files/00000000-2140-820c-a8da-03c76d7da015/raw?se=2026-10-02T17%3A53%3A57Z&sp=r&sv=2026-02-06&sr=b&scid=46664b2a-71c7-5f0a-a756-fba13f81125f&skoid=e9d2f8b1-028a-4cff-8eb1-d0e66fbefcca&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-02T16%3A07%3A32Z&ske=2026-10-03T16%3A07%3A32Z&sks=b&skv=2026-02-06&sig=gc0YjQgZ4z9jEYhODCTDm4RvwgnRVwnSuASjhOqVPqc%3D'
+        run: |
+          python - <<'PY'
+          import urllib.request,os,hashlib,zipfile,io,pathlib
+          b=urllib.request.urlopen(os.environ['SOURCE'],timeout=40).read()
+          assert len(b)==45748 and hashlib.sha256(b).hexdigest()=='4e9e2a7cc3fa0dfd11c3866f6025fc29c5df1e0e5e0529906f255ead08affc8e'
+          with zipfile.ZipFile(io.BytesIO(b)) as z:
+            for name in z.namelist():
+              p=pathlib.PurePosixPath(name)
+              assert not p.is_absolute() and '..' not in p.parts
+              assert name.startswith('automotive-network')
+            z.extractall('.')
+          PY
+      - name: Build existing site plus one isolated band
+        run: |
+          node --check automotive-network-build.mjs
+          node automotive-network-build.mjs
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path('vercel.json');v=json.loads(p.read_text());assert v['buildCommand']=='node refinement-build.mjs';v['buildCommand']='node automotive-network-build.mjs';p.write_text(json.dumps(v,indent=2)+'\n')
+          PY
+      - name: Install browser checks
+        run: |
+          npm install --no-save --package-lock=false playwright
+          npx playwright install --with-deps chromium
+      - name: Test actual HTML on five viewport widths
+        run: node automotive-network-qa.mjs
+      - name: Save only the approved band and verification
+        run: |
+          test "$(git branch --show-current)" = automotive-network-20261002
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add automotive-network.html automotive-network.css automotive-network-build.mjs automotive-network-qa.mjs automotive-network-manifest.json automotive-network-assets automotive-network-checks vercel.json
+          git commit -m 'Add approved Automotive partner network between Automotive and Government Supply; preserve all existing sections'
+          git push origin HEAD:automotive-network-20261002
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: automotive-network-browser-checks
+          path: automotive-network-checks
+          if-no-files-found: ignore
